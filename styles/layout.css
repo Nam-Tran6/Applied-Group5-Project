@@ -22,32 +22,32 @@ description: layout for website
 }
 
 h1 {
-    font-size: 60px; /* Title resized 50 pixels*/
-    color: #cccccc; /* Title change colour to grey*/
+    font-size: 60px; /* title resized 50 pixels*/
+    color: #cccccc; /* title change colour to grey*/
 }
 
 #slogan {
-    color: #cccccc;
+    color: #cccccc; /* change colour to light grey*/
 }
 
 header {
     background: url(images/digits.png) repeat-x left; /* adds fade image on top left from top left */
     display: flex; /* assigns CSS Grid*/
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0;
-    margin: 0;
-    padding: 0;
+    align-items: center; /* vertically centered*/
+    justify-content: flex-start; /* items are positioned left*/
+    gap: 0; /* removes gap*/
+    margin: 0; /* removes margin*/
+    padding: 0; /* removes padding*/
 }
 
 body {
-    background: url(images/background.png) repeat fixed; /* Adds repeating background to image*/
+    background-color: grey; /* Adds grey background*/
     margin: 0; /* ensures background wraps around body*/
-    padding: 0;
+    padding: 0; /*removes padding*/
 }
 
 nav {
-    background-color: #cccccc;
+    background-color: #cccccc; /* sets navigation background to grey*/
 }
 
 .menu {
@@ -55,7 +55,29 @@ nav {
 }
 
 nav {
-    display: flex;
+    display: flex; /*assigns CSS Flex*/
     justify-content: center; /* centers horizontally */
-    gap: 30em;
+    gap: 30em; /* spaces out nav bar*/
+}
+
+footer {
+    background-color: #cccccc; /* footer different background colour*/
+}
+
+footer p {
+    display:inline-block;
+    width: 33% /* sets width to 33% and makes all p's horizontal*/
+}
+
+footer p:first-child {
+    float:left; /* sets first child to float left*/
+}
+
+footer p:nth-child(2) {
+    text-align: center /* sets second p to float middle*/
+}
+
+footer p:last-child {
+    float:right;
+    text-align:right; /* floats right and text-align right*/
 }
