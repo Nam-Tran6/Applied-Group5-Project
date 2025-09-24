@@ -1,0 +1,61 @@
+/*
+
+filename: layout
+
+author: Kha Nam Tran
+
+created: 22/09/2025
+
+last modified: 24/09/2025
+
+description: layout for website
+
+*/
+
+@font-face {
+    font-family: OCR-A-Std; /* Inports custom fonts*/
+    src: url(fonts/ocr-a-std.ttf); /* locates the source*/
+}
+
+* {
+    font-family: OCR-A-Std; /* Apply font to all elements*/
+}
+
+h1 {
+    font-size: 60px; /* Title resized 50 pixels*/
+    color: #cccccc; /* Title change colour to grey*/
+}
+
+#slogan {
+    color: #cccccc;
+}
+
+header {
+    background: url(images/digits.png) repeat-x left; /* adds fade image on top left from top left */
+    display: flex; /* assigns CSS Grid*/
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(images/background.png) repeat fixed; /* Adds repeating background to image*/
+    margin: 0; /* ensures background wraps around body*/
+    padding: 0;
+}
+
+nav {
+    background-color: #cccccc;
+}
+
+.menu {
+    display: inline-block; /* Uses inline outline to horizontally make blocks (pls allow me to use flexbox)*/
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    gap: 30em;
+}
