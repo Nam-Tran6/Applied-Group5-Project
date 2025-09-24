@@ -30,7 +30,7 @@ h1 {
     color: #cccccc; /* change colour to light grey*/
 }
 
-header {
+#mainheading {
     background: url(images/digits.png) repeat-x left; /* adds fade image on top left from top left */
     display: flex; /* assigns CSS Grid*/
     align-items: center; /* vertically centered*/
@@ -41,7 +41,7 @@ header {
 }
 
 body {
-    background-color: grey; /* Adds grey background*/
+    background-color: #4d4d4d; /* Adds grey background*/
     margin: 0; /* ensures background wraps around body*/
     padding: 0; /*removes padding*/
 }

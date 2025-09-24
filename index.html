@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
-    <!--Meta Tags-->
-    <meta charset="utf-8">
-    <meta name="description" content="General details about our company">
-    <meta name="keywords" content="Company Details, Common Navigation, Jira & Github link">
+    <meta charset="UTF-8">
+    <!-- Charset Declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Viewport Settings for Responsive Design-->
     <meta name="author" content="Kha Nam Tran">
+    <!-- Author Information -->
+    <meta name="description" content="Home Page for Index">
+    <!-- Description of the Page -->
+    <meta name="keywords" content="Homepage, Index">
+    <!-- Keywords-->
 
     <!--Title-->
     <title>The Box</title>
@@ -17,30 +22,48 @@
 
 <body>  
     <header>
-        <!--Logo / Image-->
-        <figure class="Logo">
-            <a href="images/Box.png"> <img src="./images/Box.png" alt="Logo of Startup" title="Logo" width="60"
-            height="60" ></a> 
-        </figure>
-
-    <!--Title-->
-    <h1 class="Logo">THE BOX</h1> 
-
-    <!--Slogan-->
-    <h2 id="slogan">Infinitively Squared</h2>
-    </header>
-    
-    <main>
-        <!--Navigation-->
-        <nav>
+        <section id="mainheading">
+            <figure class="Logo">
+                <a href="images/Box.png"> <img src="./images/Box.png" alt="Logo of Startup" title="Logo" width="60"
+                height="60" ></a> 
+            </figure> <!--Logo / Image-->
+                
+            <h1 class="Logo">THE BOX</h1> <!--Title-->
+                
+            <h2 id="slogan">Infinitively Squared</h2> <!--Slogan-->
+        </section>
+     
+        <nav> <!--Navigation-->
             <p class="menu"><a href="index.html">INDEX</a></p> 
 	        <p class="menu"><a href="job.html">JOBS</a> </p> 
 	        <p class="menu"><a href="apply.html">APPLY</a></p> 
             <p class="menu"><a href="about.html">ABOUT</a></p> 
         </nav>
-
+    </header>
+    
+    <main>
         <!--Description-->
-        <p id="descrip">A data storage unit</p>
+        <aside class ="item">
+            <h2>What is the BOX?</h2>
+            <p>
+                We are a innovative new startup trying to utilise quantom mechanics to create a new method of storage.
+            </p>
+        </aside>
+        
+        <aside>
+            <h2>Who are We?</h2>
+            <p>
+                We are a cutting-edge team of programmers and engineers who wish to create the building blocks of a new way to store.
+            </p>
+        </aside>
+
+        <aside>
+            <h2>What do we offer?</h2>
+            <p>
+                Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte.
+            </p>
+        </aside>
+        
     </main>
     
     <footer>
