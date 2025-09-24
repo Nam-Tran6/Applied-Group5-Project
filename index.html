@@ -18,6 +18,14 @@
 
     <!--Link to Stylesheet-->
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
+
+    <style>
+        .item {
+            margin: auto;
+            width: 50%;
+            border: 2px solid black; /* adds border to labels*/
+        } 
+    </style>
 </head>
 
 <body>  
@@ -42,27 +50,31 @@
     </header>
     
     <main>
-        <!--Description-->
-        <aside class ="item">
-            <h2>What is the BOX?</h2>
-            <p>
-                We are a innovative new startup trying to utilise quantom mechanics to create a new method of storage.
-            </p>
-        </aside>
+        <!--Storage Picture-->
+        <br>
+        <section style="display: flex; justify-content: center;">
+            <img id="storageimage" src="images/Storage.png" alt="Image of a Storage Box" title="Storage Box"/>
+        </section>
         
-        <aside>
+        
+        <!--Description 1-->
+        <section class ="item">
+            <h2>What is the BOX?</h2>
+            <p> We are a innovative new startup trying to utilise quantom mechanics to create a new method of storage. </p>
+        </section>
+        
+        <!--Description 2-->
+        <section class="item">
             <h2>Who are We?</h2>
-            <p>
-                We are a cutting-edge team of programmers and engineers who wish to create the building blocks of a new way to store.
-            </p>
-        </aside>
+            <p> We are a cutting-edge team of programmers and engineers who wish to create the building blocks of a new way to store. </p>
+        </section>
 
-        <aside>
+        <!--Description 3-->
+        <section class="item">
             <h2>What do we offer?</h2>
-            <p>
-                Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte.
-            </p>
-        </aside>
+            <p> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </p>
+        </section>
+        <br>
         
     </main>
     

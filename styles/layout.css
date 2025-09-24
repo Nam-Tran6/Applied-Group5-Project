@@ -41,7 +41,7 @@ h1 {
 }
 
 body {
-    background-color: white; /* Adds grey background*/
+    background-color: #e6e6e6; /* Adds grey background*/
     margin: 0; /* ensures background wraps around body*/
     padding: 0; /*removes padding*/
 }
