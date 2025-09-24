@@ -30,7 +30,7 @@ h1 {
     color: #cccccc; /* change colour to light grey*/
 }
 
-header {
+#mainheading {
     background: url(images/digits.png) repeat-x left; /* adds fade image on top left from top left */
     display: flex; /* assigns CSS Grid*/
     align-items: center; /* vertically centered*/
