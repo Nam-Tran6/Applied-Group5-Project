@@ -20,19 +20,32 @@
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
 
     <style>
-        .item {
-            margin: auto;
-            width: 50%;
-            border: 2px solid black; /* adds border to labels*/
-            margin-bottom: 30px;
+        .item { /* selects all types of items*/
+            margin: 10em;
+            padding: 3em;
+            color: #1a1a1a;
         } 
+
+        body {
+            background: url(images/background.png); /* Background illustration*/
+            background-size: cover /* Background cover*/
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            margin: 10em;
+            padding: 1em;
+            background-color: #ccc;
+        }
     </style>
 
 </head>
 
 <body>
     <header> <!-- Standardized Heading-->
-
         <!--Logo Image-->
         <img id = "logo" src="images/Storage.png" alt="image of storage box">
 
@@ -58,12 +71,6 @@
     </nav>
 
     <main>
-        <!--Storage Picture-->
-        <section style="display: flex; justify-content: center; padding-top: 30px; padding-bottom: 30px;">
-            <img id="storageimage" src="images/Storage.png" alt="Image of a Storage Box" title="Storage Box"/>
-        </section>
-        
-        
         <!--Description 1-->
         <section class ="item">
             <h2>What is the BOX?</h2>
@@ -82,9 +89,15 @@
           
             <p> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </p>
         </section>
-        <br>
-        
+
+        <section class="item">
+            <h2>What do we offer?</h2>
+            <p> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </p>
+        </section>
     </main>
+
+    <!--Catchy Phrase-->
+        <h2 style= "color: #ccc; text-align: center;"> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </h2>
 
     <footer>
         <!--Jira Link-->
