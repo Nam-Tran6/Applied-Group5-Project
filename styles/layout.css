@@ -6,7 +6,8 @@ last modified: 25/09/2025
 description: layout for website
 */
 
-/* ================= FONT SECTION ================= */
+/* === FONT SECTION === */
+
 @font-face { 
     font-family: OCR-A-STD; /* Imports custom font */
     src: url(fonts/ocr-a-extended.ttf) ; /* locates the source */
@@ -16,80 +17,85 @@ description: layout for website
     font-family: OCR-A-STD; /* Apply font to all elements */
 }
 
-/* ================= HEADER SECTION ================= */
-header { /* General Header Settings*/
-    background-color: #1a1a1a; /*sets black blackground colour */
-    padding: 20px; /* Adds spacing inside the header */
-    display: flex; /* Uses flexbox layout for alignment */ 
-    gap: 20px; /* Space between logo and title */
+/* === HEADER SECTION === */
+
+/* General Header Settings*/
+header { 
+    background-color: #1a1a1a; /*background color*/
+    padding: 10px; /* Add space inside header */
+    display: flex; /* Flexbox layout*/ 
+    gap: 20px; /* Space between logo + title */
+    justify-content: space-between; /* logo+title left, slogan right */
 }
 
-#logo { /* Modification of Logo*/
-    width: 100px; /* Width of Logo*/
-    height: 80px; /* Height of Logo*/
+/* Modification of Logo*/
+#logo { 
+    width: 100px; /* Width*/
+    height: 80px; /* Height*/
 }
 
-.title h1 { /* Company Name Modification */
-    font-size: 3em; /* Aligned with logo*/
-    letter-spacing: 5px; /* Adds spacing between letters */
-    color: #ccc; 
+/* Company Name Modification */
+#title h1 { 
+    font-size: 3em; /* Font size alignment*/
+    letter-spacing: 5px; /* Space between letters*/
+    color: #ccc; /* Font color*/
 }
 
-.title p { /* Company Short Description Modification */
+/* Company Short Description Modification */
+#title p { 
     font-size: 1.2em; /* Aligned with logo*/
     margin-top: 5px; /* Small space above tagline */
-    color: #ccc;
+    color: #ccc; /* Set grey */
 }
 
-.slogan p{
-    color: #ccc;
-    order: 1;
-    
+/* Side Description*/
+#slogan h2 { 
+    font-size: 1.5em; /* Font size alignment*/
+    color: #ccc; /* Set grey */
+    margin: 0; /* Remove margin*/
+    padding: 10px; /* Expands padding*/
+    border: #cccc dashed 1px; /* Adds dashed border*/
+    font-weight: normal; /* Unbold h2 font (to help accessbility)*/
 }
 
-.slogan {
-    align-self: flex-end;
+/*Aligning Right*/
+#slogan { 
+    margin-left: auto; /* Pushes slogan right */
+    padding-right: 5em; /* Push comment inwards*/
+    align-self: center; /* Vertically center own property*/
 }
 
-/* ================= NAVIGATION BAR ================= */
+/* === NAVIGATION BAR === */
 
-/* Overall nav bar styling */
+/* Background for Navigation */
 nav {
-    background-color: #cccccc; /* sets navigation background to grey*/
-    display: flex; /*assigns CSS Flex*/
-    justify-content: center; /* centers horizontally */
-    gap: 30em; /* spaces out nav bar*/
+    background-color: #999999; /* Set grey*/
+    padding: 1px; /* Extends Border */
 }
 
 /* Styles the list inside nav (links container) */
-nav ul {
-    list-style: none;             /* Removes bullet points */
-    display: flex;                /* Displays items horizontally */
-    justify-content: center;      /* Centers links in the nav bar */
-    gap: 20px;                    /* Space between links */
-    
+nav ul {    
+    list-style: none; /* Removes bullet points */
+    display: grid; /* Grid Layout */
+    grid-template-columns: repeat(4, 25%); /* Assigns 4 columns of equal size */
+    text-align: center; /* Aligns text to the middle*/
+    padding-left: 0px; /* Removes default padding left (Inspect Element is so cool)*/
 }
 
-/* Each list item inside the nav */
-nav ul li {
-    margin: 0 30px;               /* Extra horizontal spacing around each link */
-}
-
-/* Link styles */
+/* Link Change */
 nav ul li a {
-    text-decoration: none;        /* Removes underline */
-    color: #000;                  /* Black text color */
-    font-size: 1.2rem;            /* Medium-large font size */
-    letter-spacing: 2px;          /* Slight spacing between characters */
+    text-decoration: none; /* Removes underline */
+    color: #000; /* Remove hyperlink color*/
+    font-size: 1.2em; /* Font size*/
 }
 
 /* Hover effect for links */
 nav ul li a:hover {
-    text-decoration: none;   /* Removes underline when the mouse hovers. */
-    background: transparent; /* Background stays transparent on hover. */
-    color: white;            /* Text turns white on hover. */
+    color: white; /* Text turns white*/
+    transition-duration: 0.2s; /* Delay when hovered*/
+    padding: 1em 50%; /* Dimensions that determine hover background color*/
+    background-color: #666666; /* Changes background colour when hovered over*/
 }
-
 
 /* ================= FOOTER ================= */
 
