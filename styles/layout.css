@@ -1,83 +1,181 @@
 /*
-
 filename: layout
-
 author: Kha Nam Tran
-
 created: 22/09/2025
-
 last modified: 24/09/2025
-
 description: layout for website
-
 */
 
 @font-face {
-    font-family: OCR-A-Std; /* Inports custom fonts*/
-    src: url(fonts/ocr-a-std.ttf); /* locates the source*/
+    font-family: OCR-A-STD; /* Imports custom font */
+    src: url(fonts/ocr-a-std.ttf) ; /* locates the source */
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 * {
-    font-family: OCR-A-Std; /* Apply font to all elements*/
-}
-
-h1 {
-    font-size: 60px; /* title resized 50 pixels*/
-    color: #cccccc; /* title change colour to grey*/
-}
-
-#slogan {
-    color: #cccccc; /* change colour to light grey*/
-}
-
-#mainheading {
-    background: url(images/digits.png) repeat-x left; /* adds fade image on top left from top left */
-    display: flex; /* assigns CSS Grid*/
-    align-items: center; /* vertically centered*/
-    justify-content: flex-start; /* items are positioned left*/
-    gap: 0; /* removes gap*/
-    margin: 0; /* removes margin*/
-    padding: 0; /* removes padding*/
+    font-family: OCR-A-STD; /* Apply font to all elements */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #4d4d4d; /* Adds grey background*/
-    margin: 0; /* ensures background wraps around body*/
-    padding: 0; /*removes padding*/
+    background-color: gray; /* Adds grey background */
+    background-image: url("./images/digits.png");
+    color: white;
 }
 
+  /* ================= HEADER SECTION ================= */
+
+/* Styles for the header container */
+header {
+    background: #111 url('./images/navbackground.png') repeat; /* Dark background with a repeating image pattern */
+    padding: 20px;                /* Adds spacing inside the header */
+    display: flex;                /* Uses flexbox layout for alignment */
+    align-items: center;          /* Vertically centers items inside header */
+    justify-content: center;      /* Horizontally centers items in the header */
+    gap: 20px;                    /* Space between logo and title */
+}
+
+/* Logo box style (the square icon on the left of THE BOX) */
+.logo-box {
+    width: 70px;                  /* Width of logo box */
+    height: 70px;                 /* Height of logo box */
+    background: #bbb;             /* Light grey background */
+    border-radius: 10px;          /* Slightly rounded corners */
+}
+
+/* Styles for the main title (THE BOX) */
+.title h1 {
+    font-size: 3rem;              /* Large font size for the heading */
+    font-weight: bold;            /* Makes text bold */
+    color: #ccc;                  /* Light grey text color */
+    letter-spacing: 5px;          /* Adds spacing between letters */
+}
+
+/* Styles for the tagline (Infinitively Squared) */
+.title p {
+    font-size: 1.2rem;            /* Slightly larger than normal text */
+    color: #ccc;                  /* Light grey text color */
+    margin-top: 5px;              /* Small space above tagline */
+}
+
+/* ================= NAVIGATION BAR ================= */
+
+/* Overall nav bar styling */
 nav {
-    background-color: #cccccc; /* sets navigation background to grey*/
+    background: #ccc;             /* Light grey background behind links */
+    padding: 6px;
 }
 
-.menu {
-    display: inline-block; /* Uses inline outline to horizontally make blocks (pls allow me to use flexbox)*/
+/* Styles the list inside nav (links container) */
+nav ul {
+    list-style: none;             /* Removes bullet points */
+    display: flex;                /* Displays items horizontally */
+    justify-content: center;      /* Centers links in the nav bar */
+    gap: 20px;                    /* Space between links */
+    
 }
 
-nav {
-    display: flex; /*assigns CSS Flex*/
-    justify-content: center; /* centers horizontally */
-    gap: 30em; /* spaces out nav bar*/
+/* Each list item inside the nav */
+nav ul li {
+    margin: 0 30px;               /* Extra horizontal spacing around each link */
 }
 
+/* Link styles */
+nav ul li a {
+    text-decoration: none;        /* Removes underline */
+    color: #000;                  /* Black text color */
+    font-size: 1.2rem;            /* Medium-large font size */
+    letter-spacing: 2px;          /* Slight spacing between characters */
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    text-decoration: none;   /* Removes underline when the mouse hovers. */
+    background: transparent; /* Background stays transparent on hover. */
+    color: white;            /* Text turns white on hover. */
+}
+
+
+/* ================= FOOTER ================= */
+
+/* Footer container */
 footer {
-    background-color: #cccccc; /* footer different background colour*/
+    background-color: #cccccc;    /* Light grey background */
+    padding: 10px 0;              /* Top and bottom spacing */
+    margin-top: 10px;             /* Space above footer */
 }
 
+/* General footer text style */
 footer p {
-    display:inline-block;
-    width: 33% /* sets width to 33% and makes all p's horizontal*/
+    display: inline-block;        /* Allows them to sit next to each other */
+    width: 33%;                   /* Splits footer into 3 equal parts */
 }
 
+/* First paragraph (left side of footer) */
 footer p:first-child {
-    float:left; /* sets first child to float left*/
+    float: left;                  /* Pushes it to the left */
 }
 
+/* Second paragraph (middle of footer) */
 footer p:nth-child(2) {
-    text-align: center /* sets second p to float middle*/
+    text-align: center;           /* Centers text in the middle */
 }
 
+/* Last paragraph (right side of footer) */
 footer p:last-child {
-    float:right;
-    text-align:right; /* floats right and text-align right*/
+    float: right;                 /* Pushes it to the right */
+    text-align: right;            /* Aligns text inside to the right */
+}
+
+/* Specific ID for job page footer */
+#jobfooter {
+     display: inline-block;  /* Makes the footer act like an inline element 
+                                (so it could sit next to others). */
+
+     width: 100%;            /* Forces the footer to stretch across the full width 
+                                of its parent container (entire page). */
+}
+
+
+/* style for job.html */
+
+/* Header and footer layout */
+#jobheader, footer {
+    padding: 10px 0;              /* Top and bottom spacing */
+    margin-top: 10px;             /* Space above footer */
+}
+
+/* Main content area */
+#jobMain {
+    max-width: 100%;   /* make main content span the full width */
+    margin: 16px auto; /* add vertical spacing above and below main, auto keeps it centered */
+}
+
+/* Job article container */
+.jobarticle {
+    border: 1px solid #e6e6e6; /* light gray border around each job listing */
+    padding: 18px;             /* space inside the box (around text) */
+    border-radius: 8px;        /* rounded corners */
+    margin-bottom: 18px;       /* space between this box and the next one */
+    background: transparent;   /* background is transparent (shows page background) */
+}
+
+/* Headings (h1 and h2) */
+h1, h2 {
+    margin: 0 0 8px; /* no top margin, 8px bottom margin for spacing */
+}
+
+/* General text styling */
+p, li, h3, h4, dt, dd {
+    color: white; /* make all paragraphs, list items, headings 3–4, 
+                     and description list terms/descriptions white */
+}
+
+/* Salary text */
+.salary {
+    font-weight: 600; /* make salary text bold */
 }
