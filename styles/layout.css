@@ -63,6 +63,30 @@ nav {
 footer {
     background-color: #cccccc; /* footer different background colour*/
 }
+  
+/* Apply Form styles */
+        form {
+            display: grid; /* Uses CSS Grid for structured spacing */
+            gap: 1.5rem;    /* Space between form sections */
+        }
+        
+        .form-section {
+            display: grid; /* Allows inner elements to align neatly */
+            gap: 1rem; /* Space between child elements */
+            padding: 1.5rem; /* Inner padding for breathing room */
+            border: 1px solid #e0e0e0; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #f9f9f9; /* Subtle background for separation */
+        }
+        
+        .form-section h2 {
+            margin: 0 0 0.5rem 0; /* Removes top margin, keeps bottom gap */
+            font-size: 1.2rem; /* Slightly smaller than main heading */
+            color: #333;  /* Dark gray text for readability */
+        }
+        
+         
+
 
 footer p {
     display:inline-block;
@@ -81,3 +105,79 @@ footer p:last-child {
     float:right;
     text-align:right; /* floats right and text-align right*/
 }
+
+        .checkbox-group {
+            display: flex; /* By default aligns items horizontally */
+            margin-bottom: 15px;  /* Spacing between checkbox groups */
+        }
+
+        .checkbox-group dt { 
+            clear: left;  /* Ensures each <dt> starts on new line */
+             float: left;  /* Floats the checkbox description term left */
+        }
+       
+        .checkbox-group dd {
+            width: 55%;  /* Description takes 55% of the total width */
+	    }
+
+        label {
+            font-weight: bold; /* Makes labels stand out */
+            color: black; /* Ensures high contrast readability */
+        }
+        
+        input, select, textarea {
+            padding: 0.75rem;  /* Comfortable input size */
+            border: 1px solid #ccc; /* Neutral border */
+            border-radius: 16px; /* Rounded corners */
+            font-size: 1rem; /* Readable font size */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus transitions */
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none; /* Removes default outline */
+            border-color: #666; /* Darker border on focus */
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle glow for accessibility */
+        }
+        
+        fieldset {
+            border: 2px solid black; /* Distinct border */
+            padding: 10px; /* Space inside the box */
+            background-color: lightgray; /* Highlight background */
+            border-radius: 4px; /* Rounded corners */
+            grid-column: 1 / -1; /* Makes fieldset span entire grid width */
+        }
+        
+        legend {
+            font-weight: bold; /* Emphasizes section title */
+            padding: 0 0.5rem; /* Small spacing around legend text */
+        }
+        
+        .radio-group {
+            display: flex; /* Aligns radios horizontally */
+            flex-wrap: wrap; /* Wraps onto new line if space is tight */
+            gap: 1rem;  /* Space between each option */
+            margin-top: 0.5rem;  /* Space above group */
+        }
+        
+        .radio-group label {
+            font-weight: normal; /* Radios don’t need bold labels */
+            display: flex;
+            align-items: center; /* Aligns radio input with text */
+            gap: 0.5rem; /* Space between circle and text */
+        }
+       
+        .form-actions {
+            display: flex; /* Aligns buttons in a row */
+            justify-content: center;  /* Centers buttons */
+            gap: 1rem; /* Space between buttons */
+            margin-top: 1rem; /* Space above action row */
+        }
+        
+        input[type="submit"], input[type="reset"] {
+            padding: 0.75rem 2rem; /* Big click/tap target */
+            border: none; /* No default borders */
+            border-radius: 4px; /* Rounded buttons */
+            font-weight: bold; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
