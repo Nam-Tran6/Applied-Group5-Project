@@ -2,64 +2,53 @@
 filename: layout
 author: Kha Nam Tran
 created: 22/09/2025
-last modified: 24/09/2025
+last modified: 25/09/2025
 description: layout for website
 */
 
-@font-face {
+/* ================= FONT SECTION ================= */
+@font-face { 
     font-family: OCR-A-STD; /* Imports custom font */
-    src: url(fonts/ocr-a-std.ttf) ; /* locates the source */
-    font-weight: normal;
-    font-style: normal;
-
+    src: url(fonts/ocr-a-extended.ttf) ; /* locates the source */
 }
 
 * {
     font-family: OCR-A-STD; /* Apply font to all elements */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-  /* ================= HEADER SECTION ================= */
-
-/* Styles for the header container */
-header {
-    background: #111 url('./images/navbackground.png') repeat; /* Dark background with a repeating image pattern */
-    padding: 20px;                /* Adds spacing inside the header */
-    display: flex;                /* Uses flexbox layout for alignment */
-    align-items: center;          /* Vertically centers items inside header */
-    justify-content: center;      /* Horizontally centers items in the header */
-    gap: 20px;                   /* Space between logo and title */
+/* ================= HEADER SECTION ================= */
+header { /* General Header Settings*/
+    background-color: #1a1a1a; /*sets black blackground colour */
+    padding: 20px; /* Adds spacing inside the header */
+    display: flex; /* Uses flexbox layout for alignment */ 
+    gap: 20px; /* Space between logo and title */
 }
 
-/* Logo box style (the square icon on the left of THE BOX) */
-.logo-box {
-    width: 70px;                  /* Width of logo box */
-    height: 70px;                 /* Height of logo box */
-    background: #bbb;             /* Light grey background */
-    border-radius: 10px;          /* Slightly rounded corners */
+#logo { /* Modification of Logo*/
+    width: 100px; /* Width of Logo*/
+    height: 80px; /* Height of Logo*/
 }
 
-/* Styles for the main title (THE BOX) */
-.title h1 {
-    font-size: 3rem;              /* Large font size for the heading */
-    font-weight: bold;            /* Makes text bold */
-    color: #ccc;                  /* Light grey text color */
-    letter-spacing: 5px;          /* Adds spacing between letters */
+.title h1 { /* Company Name Modification */
+    font-size: 3em; /* Aligned with logo*/
+    letter-spacing: 5px; /* Adds spacing between letters */
+    color: #ccc; 
 }
 
-body {
-    background-color: #e6e6e6; /* Adds grey background*/
-    margin: 0; /* ensures background wraps around body*/
-    padding: 0; /*removes padding*/
+.title p { /* Company Short Description Modification */
+    font-size: 1.2em; /* Aligned with logo*/
+    margin-top: 5px; /* Small space above tagline */
+    color: #ccc;
 }
 
-/* Styles for the tagline (Infinitively Squared) */
-.title p {
-    font-size: 1.2rem;            /* Slightly larger than normal text */
-    color: #ccc;                  /* Light grey text color */
-    margin-top: 5px;              /* Small space above tagline */
+.slogan p{
+    color: #ccc;
+    order: 1;
+    
+}
+
+.slogan {
+    align-self: flex-end;
 }
 
 /* ================= NAVIGATION BAR ================= */
@@ -122,12 +111,6 @@ footer {
 
 
 /* style for job.html */
-
-/* Header and footer layout */
-#jobheader, footer {
-    padding: 10px 0;              /* Top and bottom spacing */
-    margin-top: 10px;             /* Space above footer */
-}
 
 /* Main content area */
 #jobMain {
@@ -272,3 +255,8 @@ footer {
     justify-content: space-around;
 }
 
+body {
+    background-color: #e6e6e6; /* Adds grey background*/
+    margin: 0; /* ensures background wraps around body*/
+    padding: 0; /*removes padding*/
+}
