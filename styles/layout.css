@@ -48,16 +48,13 @@ body {
 
 nav {
     background-color: #cccccc; /* sets navigation background to grey*/
+    display: flex; /*assigns CSS Flex*/
+    justify-content: center; /* centers horizontally */
+    gap: 30em; /* spaces out nav bar*/
 }
 
 .menu {
     display: inline-block; /* Uses inline outline to horizontally make blocks (pls allow me to use flexbox)*/
-}
-
-nav {
-    display: flex; /*assigns CSS Flex*/
-    justify-content: center; /* centers horizontally */
-    gap: 30em; /* spaces out nav bar*/
 }
 
 footer {

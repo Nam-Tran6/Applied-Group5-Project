@@ -24,6 +24,37 @@
             border: 1px solid black;   /* draws the borders */
             border-collapse: collapse; /* merges double borders */
         }
+
+        #heading {
+            color: black;
+        }
+
+        aside {
+            float: right; /*Aligns to the right*/
+            margin: 5em; /* outside of box*/
+            padding: 1em; /* inside of box*/
+            width: 30%; /* changes the aside shrinks and expands*/
+            border: 2px solid black; /* Adds a 2 pixel solid black line*/
+            border-radius: 14px; /*rounds off rectangle*/
+        }
+
+        #information {
+            float: left; /* Aligns to the left*/
+            margin: 5em; /* outside of box*/
+            padding: 1em; /* inside of box*/
+            width: 30%; /* changes the aside shrinks and expands*/
+            border: 2px solid black; /* Adds a 2 pixel solid black line*/
+            border-radius: 14px; /*rounds off rectangle*/
+        }
+
+        #photo {
+            clear: both; /* Moves Photo below*/
+            text-align: center; /* center photo section in middle*/
+        }
+
+        #funnyfacts {
+            clear: both; /* Moves funnyfact section below aside and information*/
+        }
     </style>
 
     <body>
@@ -48,109 +79,127 @@
         </header>
 
         <main> <!-- Main content area of the page -->
-       
-            <h1 style="text-align:center;">Team Profile: The Lads</h1>
+            <h1 id = "heading" style="text-align:center;">Team Profile: The Lads</h1>
             <!-- Main heading for the page, centered using inline CSS -->
-            <h2>Class Day &amp; Time</h2>
-              <!-- Subheading introducing the class schedule -->
-            <ul>  
-            <!-- Unordered list to display class day and time -->
-                <li>Day
-                    <ul>
-                        <li>Thursday</li>                       
-                    </ul>
-                </li>
-                <li>Time
-                    <ul>
-                        <li>12:30 PM - 2:30 PM</li>
-                    </ul>
-                </li>
-            </ul>
-            <h2>Member Contributions &amp; Quotes</h2>
-            <!-- Subheading introducing the contributions section -->
-            <dl>
-            <!-- Description list: good for terms (names) and descriptions (details) -->
-            <!-- Member 1 -->
-                <dt>Kha Nam Tran — Front-end Lead</dt>
-                <dd>Contribution: Coded index.html + style.css</dd>
-                <dd>Quote: "Viciously Coding"</dd>
-                <dd>Favorite Language: French</dd>
-                <dd>Translation: Codage vicieux</dd>
-                <br>
-            <!-- Member 2 -->
-                <dt>Sothearith Kuy— Front-end Engineer</dt>
-                <dd>Contribution: Coded job.html</dd>
-                <dd>Quote: "Code Breaker"</dd>
-                <dd>Favourite language: Spanish</dd>
-                <dd>Translation: descifrador de códigos</dd>
-                <br>
-            <!-- Member 3 -->
-                <dt>Sokna David Heang — Front-end Engineer</dt>
-                <dd>Contribution: Coded about.html + apply.html</dd>
-                <dd>Quote: "Eat, Sleep, Code, Repeat"</dd>
-                <dd>Favourite language: German</dd>
-                <dd>Translation: Essen, Schlafen, Code, Wiederholen</dd>
-            </dl>
             
-            <h2>Group Photo</h2>
+            <aside>
+                <h2>Class Day &amp; Time</h2>
+                    <!-- Subheading introducing the class schedule -->
+                <ul>  
+                <!-- Unordered list to display class day and time -->
+                    <li>Day
+                        <ul>
+                            <li>Thursday</li>                       
+                        </ul>
+                    </li>
+                    <li>Time
+                        <ul>
+                            <li>12:30 PM - 2:30 PM</li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <section id="information">
+                 <h2>Member Contributions &amp; Quotes</h2>
+                <!-- Subheading introducing the contributions section -->
+                <dl>
+                <!-- Description list-->
+                <!-- Member 1 -->
+                    <dt>Kha Nam Tran — Front-end Lead</dt>
+                    <dd>Contribution: Coded index.html + style.css</dd>
+                    <dd>Quote: "Viciously Coding"</dd>
+                    <dd>Favorite Language: French</dd>
+                    <dd>Translation: Codage vicieux</dd>
+                    <br>
+                <!-- Member 2 -->
+                    <dt>Sothearith Kuy— Front-end Engineer</dt>
+                    <dd>Contribution: Coded job.html</dd>
+                    <dd>Quote: "Code Breaker"</dd>
+                    <dd>Favourite language: Spanish</dd>
+                    <dd>Translation: descifrador de códigos</dd>
+                    <br>
+                <!-- Member 3 -->
+                    <dt>Sokna David Heang — Front-end Engineer</dt>
+                    <dd>Contribution: Coded about.html + apply.html</dd>
+                    <dd>Quote: "Eat, Sleep, Code, Repeat"</dd>
+                    <dd>Favourite language: German</dd>
+                    <dd>Translation: Essen, Schlafen, Code, Wiederholen</dd>
+                </dl>
+            </section>
+
+            <!--Section detailing Photo-->
+            <section id = "photo">
+                <h2>Group Photo</h2>
+                <hr>
                 <figure> 
                     <img src="images/team-photo.jpg" alt="Group photo of The Lads team">
-                    <figcaption>The Lads — Semester 2, 2025. Left to right: .</figcaption>
+                    <figcaption>The Lads — Semester 2, 2025. Left to right: Kha Nam Tran, Sothearith Kuy, Sokna David Hoang, Rakibul.</figcaption>
+                    <hr>
                 </figure> 
-
-            <h2>Fun Facts</h2>
-            <!-- Subheading introducing fun facts table -->
-            <table>
-            <!-- Subheading introducing fun facts table -->
-                <caption>Dream Job, Coding Snack, Hometown, Sport, and Movie</caption>
-                <!-- Table caption: describes the content of the table -->
-                <thead>
-                <!-- Table header section -->
-                    <tr>
-                    <!-- Table row -->
-                        <th>Member</th>
-                        <th>Dream Job</th>
-                        <th>Coding Snack</th>
-                        <th>Hometown</th>
-                        <th>Sport</th>
-                        <th>Movie</th>
-                        <!-- table head -->
-                    </tr>
-                </thead>
-                <tbody>
-                <!-- Table body containing data rows -->
-                    <tr>
-                    <!-- Table row -->
-                        <td>Kha Nam Tran</td>
-                        <td>Teacher</td>
-                        <td>Lollies from Confectionary</td>
-                        <td>St Albans</td>
-                        <td>I'm a nerd, I don't do sports</td>
-                        <td>Interstellar</td>
-                        <!-- table description-->
-                    </tr>
-                    <tr>
-                    <!-- Table row -->
-                        <td>Sothearith Kuy</td>
-                        <td>Developer</td>
-                        <td>Chip</td>
-                        <td>Siem Reap</td>
-                        <td>Soccer</td>
-                        <td>John Wick</td>
-                        <!-- table description-->
-                    </tr>
-                    <tr>
-                    <!-- Table row -->
-                        <td>Sokna David Heang</td>
-                        <td>Software Engineer</td>
-                        <td>Chocolate</td>
-                        <td>Phnom Penh</td>
-                        <td>Basketball</td>
-                        <td>Spiderman</td>
-                        <!-- table description-->
-                    </tr>
-                </tbody>
-            </table>
+            </section>
+           
+            <!--Section involving facts about team-->
+            <section id="funnyfacts">
+                <h2>Fun Facts</h2>
+                <table>
+                <!-- Subheading introducing fun facts table -->
+                    <caption>Dream Job, Coding Snack, Hometown, Sport, and Movie</caption>
+                    <!-- Table caption: describes the content of the table -->
+                    <thead>
+                    <!-- Table header section -->
+                        <tr>
+                        <!-- Table row -->
+                            <th>Member</th>
+                            <th>Dream Job</th>
+                            <th>Coding Snack</th>
+                            <th>Hometown</th>
+                            <th>Sport</th>
+                            <th>Movie</th>
+                            <!-- table head -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Table body containing data rows -->
+                        <tr>
+                        <!-- Table row -->
+                            <td>Kha Nam Tran</td>
+                            <td>Teacher</td>
+                            <td>Lollies from Confectionary</td>
+                            <td>St Albans</td>
+                            <td>I'm a nerd, I don't do sports</td>
+                            <td>Interstellar</td>
+                            <!-- table description-->
+                        </tr>
+                        <tr>
+                        <!-- Table row -->
+                            <td>Sothearith Kuy</td>
+                            <td>Developer</td>
+                            <td>Chip</td>
+                            <td>Siem Reap</td>
+                            <td>Soccer</td>
+                            <td>John Wick</td>
+                            <!-- table description-->
+                        </tr>
+                        <tr>
+                        <!-- Table row -->
+                            <td>Sokna David Heang</td>
+                            <td>Software Engineer</td>
+                            <td>Chocolate</td>
+                            <td>Phnom Penh</td>
+                            <td>Basketball</td>
+                            <td>Spiderman</td>
+                            <!-- table description-->
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
+
+        <br>
+
+        <footer>
+            <hr style ="height:30px">
+        </footer>
     </body>
 </html>
