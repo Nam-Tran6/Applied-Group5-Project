@@ -12,7 +12,7 @@
     <!-- Keywords-->
     <meta name="author" content="Sothearith Kuy" />
     <!-- Author Information -->
-    
+
     <!--Title-->
     <title>Job Info</title>
 
@@ -21,49 +21,56 @@
 </head>
 
 <style>
-    /* The <aside> element is styled here.
-       It takes 25% of the page width, floats to the right of the main content,
-       has a solid border, margin for spacing from other content, and padding inside. */
     aside {
         width: 25%;
+        /* Sets the width of the <aside> element to 25% of its parent container. */
         float: right;
-        margin: 0 0 1em 1em;
+        /* Positions the <aside> element on the right side, allowing other content to flow around it. */
+        margin-top: 4px;
+        /* Adds 4px of space above the <aside> element. */
         border: 1px solid black;
+        /* Gives the <aside> element a 1px solid white border. */
         padding: 1em;
+        /* Adds inner spacing (padding) of 1em inside the <aside>, so its content doesn’t touch the border. */
         box-sizing: border-box;
+        /* Ensures width includes padding and border, preventing the box from expanding beyond 25%. */
     }
 
     article {
         border: 2px solid black;
+        /* Gives the <article> element a 2px solid white border. */
         padding: 18px;
+        /* Adds 18px of inner spacing inside the <article>. */
         border-radius: 8px;
+        /* Rounds the corners of the <article> border with an 8px radius. */
         margin-bottom: 18px;
+        /* Adds 18px of space below each <article>, separating it from elements beneath. */
         background: transparent;
+        /* Makes the background see-through (inherits the parent’s background). */
     }
 </style>
+<!-- All these job description is from GenAI (ChatGPT)-->
 
 <body>
-    <header>
-        <section id="mainheading">
-            <figure class="Logo">
-                <a href="images/Box.png"> <img src="./images/Box.png" alt="Logo of Startup" title="Logo" width="60"
-                height="60" ></a> 
-            </figure> <!--Logo / Image-->
-                
-            <h1 class="Logo">THE BOX</h1> <!--Title-->
-                
-            <h2 id="slogan">Infinitively Squared</h2> <!--Slogan-->
-        </section>
-     
-        <nav> <!--Navigation-->
-            <p class="menu"><a href="index.html">INDEX</a></p> 
-	        <p class="menu"><a href="job.html">JOBS</a> </p> 
-	        <p class="menu"><a href="apply.html">APPLY</a></p> 
-            <p class="menu"><a href="about.html">ABOUT</a></p> 
-        </nav>
+    <header id="jobheader"> <!-- The header section of the page with an ID "jobheader". 
+                                             Typically used for the top branding/logo/title area. -->
+        <div class="logo-box"></div> <!-- An empty box reserved for a logo (styled later with CSS). -->
+        <div class="title"> <!-- A container for the site title and subtitle. -->
+            <h1>THE BOX</h1> <!-- Main heading of the page/website (the company or site name). -->
+            <p>Infinitively Squared</p> <!-- Subtitle or slogan of the site. -->
+        </div>
     </header>
 
-    <main>
+    <nav> <!-- The navigation bar of the site. -->
+        <ul> <!-- Unordered list to hold the navigation links. -->
+            <li><a href="index.html">HOME</a></li> <!-- List item with a link to the home page. -->
+            <li><a href="job.html">JOBS</a></li> <!-- Link to the jobs page. -->
+            <li><a href="apply.html">APPLY</a></li> <!-- Link to the apply page (for applications). -->
+            <li><a href="about.html">ABOUT</a></li> <!-- Link to the about page (company details). -->
+        </ul>
+    </nav>
+
+    <main id="jobMain">
         <!-- <section> groups related content. This one is for job openings -->
         <section>
             <h2 id="openings" style="color: black">Open Positions</h2>
@@ -71,23 +78,34 @@
 
 
             <!-- Each job post is wrapped in an <article> because it is a self-contained piece of content -->
-            <article>
+            <article class="jobarticle">
+                <!-- <article> = represents a single, self-contained piece of content. 
+                     The class "jobarticle" can be used for styling job postings. -->
+
                 <h3 id="refA1B2C-title">Ref: A1B2C — Senior Product Designer</h3>
-                <!-- <h3> is a heading specific to this job -->
-                <p>Short: Lead product experiences across core flows — from discovery to design handoff. Balance craft
-                    with
-                    pragmatic delivery.</p>
-                <!-- <dl> is a definition list used here for Salary and Reporting line -->
+                <!-- <h3> is the job title with a unique reference ID ("A1B2C"). 
+                     The id makes it targetable by links or CSS/JS. -->
+
+                <!-- Short description/summary of the role -->
+                <p>
+                    Short: Lead product experiences across core flows — from discovery to design handoff.
+                    Balance craft with pragmatic delivery.
+                </p>
+
+                <!-- <dl> = description list for structured job info (label + value pairs). -->
                 <dl>
-                    <dt>Salary</dt>
+                    <dt>Salary</dt> <!-- <dt> = definition term (label: "Salary") -->
                     <dd>USD 120,000–150,000 (dep. on experience) + equity</dd>
-                    <dt>Reporting line</dt>
-                    <dd>Reports to Head of Product</dd>
+                    <!-- <dd> = definition detail (salary value) -->
+
+                    <dt>Reporting line</dt> <!-- Another label -->
+                    <dd>Reports to Head of Product</dd> <!-- The value for that label -->
                 </dl>
 
+                <h4>Key responsibilities</h4>
+                <!-- <h4> introduces a subsection of the job posting. -->
 
-                <h4>Key responsibilities</h4> <!-- <h4> introduces a subsection -->
-                <!-- <header> contains the main page title and an introduction -->
+                <!-- Ordered list (<ol>) because responsibilities usually follow a logical sequence. -->
                 <ol>
                     <li>Drive end-to-end design for one product vertical (user research → prototype → handoff).</li>
                     <li>Create and maintain reusable components and patterns in our design system.</li>
@@ -95,9 +113,8 @@
                     <li>Mentor junior designers; run design critiques and usability sessions.</li>
                 </ol>
 
-
                 <h4>Essential requirements</h4>
-                <!-- <ul> is an unordered (bulleted) list -->
+                <!-- <ul> = unordered list for non-sequential requirements. -->
                 <ul>
                     <li>5+ years in product design with shipped SaaS products.</li>
                     <li>Strong prototyping skills (Figma, interactive prototypes) and practical research experience.
@@ -107,8 +124,8 @@
                         screens).</li>
                 </ul>
 
-
                 <h4>Preferable</h4>
+                <!-- Another unordered list for "nice to have" skills. -->
                 <ul>
                     <li>Familiarity with HTML/CSS or React component thinking.</li>
                     <li>Experience in developer tooling, analytics, or B2B workflow products.</li>
@@ -118,20 +135,34 @@
 
             <!-- Second job article -->
             <article>
+                <!-- The <article> element defines a self-contained piece of content 
+                     (in this case, a single job posting). -->
+
                 <h3 id="refD4E5F-title">Ref: D4E5F — Frontend Engineer, Design Systems</h3>
-                <p>Short: Build and maintain the design system and component library used by product teams; reduce
-                    design-to-code
-                    friction.</p>
+                <!-- The job title with a unique reference ID (D4E5F). 
+                     The id could be used for linking or styling. -->
+
+                <p>
+                    Short: Build and maintain the design system and component library used by product teams;
+                    reduce design-to-code friction.
+                </p>
+                <!-- A short description/summary of the role. -->
+
                 <dl>
+                    <!-- <dl> defines a Description List, good for structured job details like salary. -->
                     <dt>Salary</dt>
+                    <!-- <dt> = definition term (label) -->
                     <dd>USD 140,000–170,000 (dep. on experience) + equity</dd>
+                    <!-- <dd> = definition data (value for the label) -->
+
                     <dt>Reporting line</dt>
                     <dd>Reports to Engineering Manager (Platform)</dd>
                 </dl>
-
+                <!-- This block neatly pairs labels (Salary, Reporting line) with their values. -->
 
                 <h4>Key responsibilities</h4>
                 <ol>
+                    <!-- Ordered list (<ol>) used for tasks/responsibilities, since they follow a sequence or priority. -->
                     <li>Implement accessible, testable UI components as a shared library (React + TypeScript).</li>
                     <li>Integrate design tokens and automate releases for designers and product teams.</li>
                     <li>Collaborate with designers to translate patterns into code and improve documentation/examples.
@@ -139,9 +170,9 @@
                     <li>Maintain CI, visual regression tests, and versioning for the component library.</li>
                 </ol>
 
-
                 <h4>Essential requirements</h4>
                 <ul>
+                    <!-- Unordered list (<ul>) for essential requirements (no particular order). -->
                     <li>4+ years building production React component libraries in TypeScript.</li>
                     <li>Practical experience with Storybook, unit & visual regression testing, and CSS-in-JS or
                         utility-first
@@ -149,9 +180,9 @@
                     <li>Clear communicator who can partner with designers to iterate on accessibility and behavior.</li>
                 </ul>
 
-
                 <h4>Preferable</h4>
                 <ul>
+                    <!-- Another unordered list for "nice to have" (non-essential) skills. -->
                     <li>Experience exporting design tokens from Figma or similar tools and automating token pipelines.
                     </li>
                     <li>Worked at early-stage startups or on platform/infra teams focused on developer UX.</li>
@@ -163,12 +194,16 @@
 
         <!-- Section for instructions on how to apply -->
         <section>
-            <h2 id="howtoapply" style="color: white;">How to apply</h2>
+            <h2 id="howtoapply" style="color: black;">How to apply</h2>
             <p>Send a one-page cover note and portfolio or GitHub link to <a
                     href=" mailto:jobs@email.com">jobs@example.com</a>
                 with the reference code in the subject line.</p>
             <p>We review applications on a rolling basis and aim for an interview loop that includes a short design/code
                 exercise and two cross-functional interviews.</p>
+            <p>Company is an equal-opportunity employer. Candidates must be authorized to work in the country they apply
+                from.
+            </p>
+
         </section>
 
 
@@ -183,10 +218,15 @@
         </aside>
     </main>
 
+
     <!-- <footer> is for page-level footer content -->
-    <footer>
-        <p>Company is an equal-opportunity employer. Candidates must be authorized to work in the country they apply
-            from.
-        </p>
+    <footer id="jobfooter">
+        <!--Jira Link-->
+        <p><a href="https://sothearithkuy37.atlassian.net/jira/software/projects/A1/summary"
+                title="This takes you to Jira">Jira Link</a></p>
+        <!--Github Link-->
+        <p><a href="https://github.com/Nam-Tran6/Applied-Group5-Project">Github Link</a></p>
+        <!-- Email Link-->
+        <p><a href="mailto:info@companyname.com">Email</a></p>
     </footer>
 </body>

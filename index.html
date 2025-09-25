@@ -18,62 +18,81 @@
 
     <!--Link to Stylesheet-->
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
+
+    <style>
+        .item {
+            margin: auto;
+            width: 50%;
+            border: 2px solid black; /* adds border to labels*/
+            margin-bottom: 30px;
+        } 
+
+        .item h2,p {
+            padding-left: 20px;
+        }
+    </style>
+
 </head>
 
-<body>  
-    <header>
-        <section id="mainheading">
-            <figure class="Logo">
-                <a href="images/Box.png"> <img src="./images/Box.png" alt="Logo of Startup" title="Logo" width="60"
-                height="60" ></a> 
-            </figure> <!--Logo / Image-->
-                
-            <h1 class="Logo">THE BOX</h1> <!--Title-->
-                
-            <h2 id="slogan">Infinitively Squared</h2> <!--Slogan-->
-        </section>
-     
-        <nav> <!--Navigation-->
-            <p class="menu"><a href="index.html">INDEX</a></p> 
-	        <p class="menu"><a href="job.html">JOBS</a> </p> 
-	        <p class="menu"><a href="apply.html">APPLY</a></p> 
-            <p class="menu"><a href="about.html">ABOUT</a></p> 
-        </nav>
+<body>
+    <header id="jobheader"> <!-- The header section of the page with an ID "jobheader". 
+                                         Typically used for the top branding/logo/title area. -->
+        <div class="logo-box"></div> <!-- An empty box reserved for a logo (styled later with CSS). -->
+        <div class="title"> <!-- A container for the site title and subtitle. -->
+            <h1>THE BOX</h1> <!-- Main heading of the page/website (the company or site name). -->
+            <p>Infinitively Squared</p> <!-- Subtitle or slogan of the site. -->
+        </div>
     </header>
-    
-    <main>
-        <!--Description-->
-        <aside class ="item">
-            <h2>What is the BOX?</h2>
-            <p>
-                We are a innovative new startup trying to utilise quantom mechanics to create a new method of storage.
-            </p>
-        </aside>
-        
-        <aside>
-            <h2>Who are We?</h2>
-            <p>
-                We are a cutting-edge team of programmers and engineers who wish to create the building blocks of a new way to store.
-            </p>
-        </aside>
 
-        <aside>
+    <nav> <!-- The navigation bar of the site. -->
+        <ul> <!-- Unordered list to hold the navigation links. -->
+            <li><a href="index.html">HOME</a></li> <!-- List item with a link to the home page. -->
+            <li><a href="job.html">JOBS</a></li> <!-- Link to the jobs page. -->
+            <li><a href="apply.html">APPLY</a></li> <!-- Link to the apply page (for applications). -->
+            <li><a href="about.html">ABOUT</a></li> <!-- Link to the about page (company details). -->
+        </ul>
+    </nav>
+
+
+    <main>
+        <!--Storage Picture-->
+        <section style="display: flex; justify-content: center; padding-top: 30px; padding-bottom: 30px;">
+            <img id="storageimage" src="images/Storage.png" alt="Image of a Storage Box" title="Storage Box"/>
+        </section>
+        
+        
+        <!--Description 1-->
+        <section class ="item">
+            <h2>What is the BOX?</h2>
+            <p> We are a innovative new startup trying to utilise quantom mechanics to create a new method of storage. </p>
+        </section>
+        
+        <!--Description 2-->
+        <section class="item">
+            <h2>Who are We?</h2>
+            <p> We are a cutting-edge team of programmers and engineers who wish to create the building blocks of a new way to store. </p>
+        </section>
+
+        <!--Description 3-->
+        <section class="item">
             <h2>What do we offer?</h2>
-            <p>
-                Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte.
-            </p>
-        </aside>
+          
+            <p> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </p>
+        </section>
+        <br>
         
     </main>
-    
+
     <footer>
+
         <!--Jira Link-->
-        <p><a href="https://sothearithkuy37.atlassian.net/jira/software/projects/A1/summary" 
-            title="This takes you to Jira">Jira Link</a></p>
+        <p><a href="https://sothearithkuy37.atlassian.net/jira/software/projects/A1/summary"
+         title="This takes you to Jira">Jira Link</a></p>
         <!--Github Link-->
-        <p><a href="https://github.com/Nam-Tran6/Applied-Group5-Project">Github Link</a></p>
+        <a href="https://github.com/Nam-Tran6/Applied-Group5-Project">Github Link</a>
         <!-- Email Link-->
-        <p><a href="mailto:info@companyname.com">Email</a></p>
+        <a href="mailto:info@companyname.com">Email</a>
+        <!--Jira Link-->
     </footer>
 </body>
 
