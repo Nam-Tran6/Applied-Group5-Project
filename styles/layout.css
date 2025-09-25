@@ -104,17 +104,17 @@ nav ul li a:hover {
 
 /* ================= FOOTER ================= */
 
-/* Footer container */
 footer {
-    background-color: #cccccc;    /* Light grey background */
-    padding: 10px 0;              /* Top and bottom spacing */
-    margin-top: 10px;             /* Space above footer */
+    background-color: #cccccc; /* footer different background colour*/
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Specific ID for job page footer */
 #jobfooter {
-     display: inline-block;  /* Makes the footer act like an inline element 
-                                (so it could sit next to others). */
+     display: flex;         /* Turns the footer into a flex container, 
+                                allowing its child elements to be laid out in a row 
+                                (or column if specified) and easily aligned. */
 
      width: 100%;            /* Forces the footer to stretch across the full width 
                                 of its parent container (entire page). */
@@ -135,15 +135,6 @@ footer {
     margin: 16px auto; /* add vertical spacing above and below main, auto keeps it centered */
 }
 
-/* Job article container */
-.jobarticle {
-    border: 1px solid #e6e6e6; /* light gray border around each job listing */
-    padding: 18px;             /* space inside the box (around text) */
-    border-radius: 8px;        /* rounded corners */
-    margin-bottom: 18px;       /* space between this box and the next one */
-    background: transparent;   /* background is transparent (shows page background) */
-}
-
 /* Headings (h1 and h2) */
 h1, h2 {
     margin: 0 0 8px; /* no top margin, 8px bottom margin for spacing */
@@ -157,11 +148,8 @@ p, li, h3, h4, dt, dd {
 
 /* Salary text */
 .salary {
-    font-weight: 600; /* make salary text bold */
+    font-weight: 600; /* make salary text bold 600 = semi bold */
 }
+
   
-footer {
-    background-color: #cccccc; /* footer different background colour*/
-    display: flex;
-    justify-content: space-around;
-}
+
