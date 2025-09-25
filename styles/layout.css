@@ -30,7 +30,7 @@ header {
     display: flex;                /* Uses flexbox layout for alignment */
     align-items: center;          /* Vertically centers items inside header */
     justify-content: center;      /* Horizontally centers items in the header */
-    gap: 20px;                    /* Space between logo and title */
+    gap: 20px;                   /* Space between logo and title */
 }
 
 /* Logo box style (the square icon on the left of THE BOX) */
@@ -47,7 +47,8 @@ header {
     font-weight: bold;            /* Makes text bold */
     color: #ccc;                  /* Light grey text color */
     letter-spacing: 5px;          /* Adds spacing between letters */
-  
+}
+
 body {
     background-color: #e6e6e6; /* Adds grey background*/
     margin: 0; /* ensures background wraps around body*/
@@ -150,7 +151,7 @@ h1, h2 {
 
 /* General text styling */
 p, li, h3, h4, dt, dd {
-    color: white; /* make all paragraphs, list items, headings 3–4, 
+    color: black; /* make all paragraphs, list items, headings 3–4, 
                      and description list terms/descriptions white */
 }
 
