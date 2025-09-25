@@ -62,22 +62,7 @@ nav {
 
 footer {
     background-color: #cccccc; /* footer different background colour*/
+    display: flex;
+    justify-content: space-around;
 }
 
-footer p {
-    display:inline-block;
-    width: 33% /* sets width to 33% and makes all p's horizontal*/
-}
-
-footer p:first-child {
-    float:left; /* sets first child to float left*/
-}
-
-footer p:nth-child(2) {
-    text-align: center /* sets second p to float middle*/
-}
-
-footer p:last-child {
-    float:right;
-    text-align:right; /* floats right and text-align right*/
-}
