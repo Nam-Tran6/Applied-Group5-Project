@@ -21,12 +21,6 @@ description: layout for website
     box-sizing: border-box;
 }
 
-body {
-    background-color: gray; /* Adds grey background */
-    background-image: url("./images/digits.png");
-    color: white;
-}
-
   /* ================= HEADER SECTION ================= */
 
 /* Styles for the header container */
@@ -53,6 +47,11 @@ header {
     font-weight: bold;            /* Makes text bold */
     color: #ccc;                  /* Light grey text color */
     letter-spacing: 5px;          /* Adds spacing between letters */
+  
+body {
+    background-color: #e6e6e6; /* Adds grey background*/
+    margin: 0; /* ensures background wraps around body*/
+    padding: 0; /*removes padding*/
 }
 
 /* Styles for the tagline (Infinitively Squared) */
@@ -66,8 +65,10 @@ header {
 
 /* Overall nav bar styling */
 nav {
-    background: #ccc;             /* Light grey background behind links */
-    padding: 6px;
+    background-color: #cccccc; /* sets navigation background to grey*/
+    display: flex; /*assigns CSS Flex*/
+    justify-content: center; /* centers horizontally */
+    gap: 30em; /* spaces out nav bar*/
 }
 
 /* Styles the list inside nav (links container) */
@@ -107,28 +108,6 @@ footer {
     background-color: #cccccc;    /* Light grey background */
     padding: 10px 0;              /* Top and bottom spacing */
     margin-top: 10px;             /* Space above footer */
-}
-
-/* General footer text style */
-footer p {
-    display: inline-block;        /* Allows them to sit next to each other */
-    width: 33%;                   /* Splits footer into 3 equal parts */
-}
-
-/* First paragraph (left side of footer) */
-footer p:first-child {
-    float: left;                  /* Pushes it to the left */
-}
-
-/* Second paragraph (middle of footer) */
-footer p:nth-child(2) {
-    text-align: center;           /* Centers text in the middle */
-}
-
-/* Last paragraph (right side of footer) */
-footer p:last-child {
-    float: right;                 /* Pushes it to the right */
-    text-align: right;            /* Aligns text inside to the right */
 }
 
 /* Specific ID for job page footer */
@@ -178,4 +157,10 @@ p, li, h3, h4, dt, dd {
 /* Salary text */
 .salary {
     font-weight: 600; /* make salary text bold */
+}
+  
+footer {
+    background-color: #cccccc; /* footer different background colour*/
+    display: flex;
+    justify-content: space-around;
 }
