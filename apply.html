@@ -3,25 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Charset Declaration -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Viewport Settings for Responsive Design-->
     <meta name="author" content="Sokna David Heang">
-    <!-- Author Information -->
     <meta name="description" content="page for applying for Tech Talent">
-    <!-- Description of the Page -->
     <meta name="keywords" content="Tech Talent, Application">
-    <!-- Keywords for Search Engines -->
-
     <title>Application</title>
-    <!-- Title of the Page (Tab Bar) -->
-
-    <link rel="stylesheet" href="styles/layout.css" type="text/css">
-    <!--Link to Stylesheet-->
-</head>
-
-<style>
-    label {
+    <link rel="stylesheet" href="styles/layout.css" type="text/css"> 
+    
+    <style>
+        /* Main content styles */
+        main {
+            max-width: 800px; /* Restricts content width for better readability */
+            margin: 2rem auto;  /* Centers the <main> horizontally with vertical spacing */
+            padding: 0 2rem;  /* Adds padding on left/right to avoid edge collisions */
+        }
+        
+      
+        /* Submit button */
+        input[type="submit"] {
+            background-color: #333; /* Dark background */
+            color: white;  /* White text for contrast */
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #555; /* Lighter gray on hover */
+        }
+        /* Reset button */
+        input[type="reset"] {
+            background-color: #e0e0e0; /* Light gray background */
+            color: #333; /* Dark text */
+        }
+        
+        input[type="reset"]:hover {
+            background-color: #d0d0d0; /* Slightly darker gray on hover */
+        }
+       label {
         font-weight: bold;
         /* Makes labels bold */
         color: black;
@@ -42,163 +58,338 @@
         /* lightgray underline for the title */
         margin-top: 10px;
     }
-</style>
+
+    /* style for job.html */
+
+/* Main content area */
+#jobMain {
+    max-width: 100%;   /* make main content span the full width */
+    margin: 16px auto; /* add vertical spacing above and below main, auto keeps it centered */
+}
+  
+/* Apply Form styles */
+        form {
+            display: grid; /* Uses CSS Grid for structured spacing */
+            gap: 1.5rem;    /* Space between form sections */
+        }
+        
+        .form-section {
+            display: grid; /* Allows inner elements to align neatly */
+            gap: 1rem; /* Space between child elements */
+            padding: 1.5rem; /* Inner padding for breathing room */
+            border: 1px solid #e0e0e0; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #f9f9f9; /* Subtle background for separation */
+        }
+        
+        .form-section h2 {
+            margin: 0 0 0.5rem 0; /* Removes top margin, keeps bottom gap */
+            font-size: 1.2rem; /* Slightly smaller than main heading */
+            color: #333;  /* Dark gray text for readability */
+        }
+        
+         
+
+
+/* Job article container */
+.jobarticle {
+    border: 1px solid #e6e6e6; /* light gray border around each job listing */
+    padding: 18px;             /* space inside the box (around text) */
+    border-radius: 8px;        /* rounded corners */
+    margin-bottom: 18px;       /* space between this box and the next one */
+    background: transparent;   /* background is transparent (shows page background) */
+}
+
+/* Headings (h1 and h2) */
+h1, h2 {
+    margin: 0 0 8px; /* no top margin, 8px bottom margin for spacing */
+}
+
+/* General text styling */
+p, li, h3, h4, dt, dd {
+    color: black; /* make all paragraphs, list items, headings 3–4, 
+                     and description list terms/descriptions white */
+}
+
+
+footer p:last-child {
+    float:right;
+    text-align:right; /* floats right and text-align right*/
+}
+
+        .checkbox-group {
+            display: flex; /* By default aligns items horizontally */
+            margin-bottom: 15px;  /* Spacing between checkbox groups */
+        }
+
+        .checkbox-group dt { 
+            clear: left;  /* Ensures each <dt> starts on new line */
+             float: left;  /* Floats the checkbox description term left */
+        }
+       
+        .checkbox-group dd {
+            width: 55%;  /* Description takes 55% of the total width */
+	    }
+
+        label {
+            font-weight: bold; /* Makes labels stand out */
+            color: black; /* Ensures high contrast readability */
+        }
+        
+        input, select, textarea {
+            padding: 0.75rem;  /* Comfortable input size */
+            border: 1px solid #ccc; /* Neutral border */
+            border-radius: 16px; /* Rounded corners */
+            font-size: 1rem; /* Readable font size */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus transitions */
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none; /* Removes default outline */
+            border-color: #666; /* Darker border on focus */
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle glow for accessibility */
+        }
+        
+        fieldset {
+            border: 2px solid black; /* Distinct border */
+            padding: 10px; /* Space inside the box */
+            background-color: lightgray; /* Highlight background */
+            border-radius: 4px; /* Rounded corners */
+            grid-column: 1 / -1; /* Makes fieldset span entire grid width */
+        }
+        
+        legend {
+            font-weight: bold; /* Emphasizes section title */
+            padding: 0 0.5rem; /* Small spacing around legend text */
+        }
+        
+        .radio-group {
+            display: flex; /* Aligns radios horizontally */
+            flex-wrap: wrap; /* Wraps onto new line if space is tight */
+            gap: 1rem;  /* Space between each option */
+            margin-top: 0.5rem;  /* Space above group */
+        }
+        
+        .radio-group label {
+            font-weight: normal; /* Radios don’t need bold labels */
+            display: flex;
+            align-items: center; /* Aligns radio input with text */
+            gap: 0.5rem; /* Space between circle and text */
+        }
+       
+        .form-actions {
+            display: flex; /* Aligns buttons in a row */
+            justify-content: center;  /* Centers buttons */
+            gap: 1rem; /* Space between buttons */
+            margin-top: 1rem; /* Space above action row */
+        }
+        
+        input[type="submit"], input[type="reset"] {
+            padding: 0.75rem 2rem; /* Big click/tap target */
+            border: none; /* No default borders */
+            border-radius: 4px; /* Rounded buttons */
+            font-weight: bold; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+/* Salary text */
+.salary {
+    font-weight: 600; /* make salary text bold */
+}
+    </style>
 
 <body>
-    <header id="jobheader"> <!-- The header section of the page with an ID "jobheader". 
-                                         Typically used for the top branding/logo/title area. -->
-        <div class="logo-box"></div> <!-- An empty box reserved for a logo (styled later with CSS). -->
-        <div class="title"> <!-- A container for the site title and subtitle. -->
-            <h1>THE BOX</h1> <!-- Main heading of the page/website (the company or site name). -->
-            <p>Infinitively Squared</p> <!-- Subtitle or slogan of the site. -->
+    <header> <!-- Standardized Heading-->
+
+        <!--Logo Image-->
+        <img id = "logo" src="images/Storage.png" alt="image of storage box">
+
+        <!--Main Heading Information-->
+        <div id="title"> 
+            <h1>THE BOX</h1>
+            <p>Infinitively Squared</p> 
         </div>
+
+        <!--Seperate Slogan on Side-->
+        <aside id= "slogan">
+            <h2>A NEW FRONTIER FOR DATA</h2>
+        </aside>
     </header>
 
-    <nav> <!-- The navigation bar of the site. -->
-        <ul> <!-- Unordered list to hold the navigation links. -->
-            <li><a href="index.html">HOME</a></li> <!-- List item with a link to the home page. -->
-            <li><a href="job.html">JOBS</a></li> <!-- Link to the jobs page. -->
-            <li><a href="apply.html">APPLY</a></li> <!-- Link to the apply page (for applications). -->
-            <li><a href="about.html">ABOUT</a></li> <!-- Link to the about page (company details). -->
+    <nav> <!--Navigation Bar-->
+        <ul> <!--Unordered List-->
+            <li><a href="index.html">HOME</a></li> <!--Home Link-->
+            <li><a href="job.html">JOBS</a></li> <!--Jobs Link-->
+            <li><a href="apply.html">APPLY</a></li> <!--Apply Link-->
+            <li><a href="about.html">ABOUT</a></li> <!--About Link-->
         </ul>
     </nav>
-
+    
     <main>
-        <!-- APPLICATION FORM START -->
-        <h1 id="ptitle" style="text-align:center; color:black;">Tech Talent Application Form</h1>
-        <br>
-        <!-- heading for the application form -->
+        <h2 style="text-align:center;">Tech Talent Application Form</h2>
+        
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-            <!-- action: URL where form data will be submitted -->
-            <!-- method="post": sends data securely in the request body -->
             <!-- SECTION 1: JOB DETAILS -->
-            <label for="Job_Reference_Number">Job Reference Number:</label>
-            <!-- 'for' connects label to the input with same id -->
-            <input type="text" id="Job_Reference_Number" name="Job_Reference_Number" maxlength="5" required
-                pattern="[A-Za-z0-9]{5}" title="5 Alphanumeric Characters">
-            <!-- Text field:
-                 - maxlength="5" restricts input to 5 characters
-                 - required: must be filled before submission
-                 - pattern: must be exactly 5 letters/numbers
-                 - title: shown as tooltip if invalid -->
-            <br>
-            <br>
+            <section class="form-section">
+                <h2>Job Details</h2>
+                <div class="form-group">
+                    <label for="Job_Reference_Number">Job Reference Number:</label>
+                    <input type="text" id="Job_Reference_Number" name="Job_Reference_Number" maxlength="5" required 
+                    pattern="[A-Za-z0-9]{5}" title="5 Alphanumeric Characters">
+                </div>
+            </section>
+            
             <!-- SECTION 2: PERSONAL DETAILS -->
-            <label for="First_Name">First Name:</label>
-            <input type="text" id="First_Name" name="First_Name" required maxlength="20" pattern="[A-Za-z ]{1,20}"
-                title="20 Alphabetic Characters Max">
-            <!-- Only allows letters (no numbers or special characters) -->
-            <br>
-            <br>
-            <label for="Last_Name">Last Name:</label>
-            <input type="text" id="Last_Name" name="Last_Name" required pattern="[A-Za-z ]{1,20}" maxlength="20"
-                title="20 Alphabetic Characters Max">
-            <br>
-            <br>
-            <label for="DOB">Date of Birth:</label>
-            <input type="text" id="DOB" name="DOB" placeholder="dd/mm/yyyy"
-                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" title="Enter date in dd/mm/yyyy format"
-                required>
-            <!-- Pattern ensures valid date format like 25/12/2000 -->
-            <br>
-            <br>
-            <fieldset>
-                <!-- GENDER SECTION -->
-                <legend>Gender</legend>
-                <!-- Fieldset groups related inputs with a border and legend title -->
-                <input type="radio" id="Male" name="Gender" value="Male" required>
-                <label for="Male">Male</label>
-                <br>
-                <input type="radio" id="Female" name="Gender" value="Female" required>
-                <label for="Female">Female</label>
-                <br>
-                <input type="radio" id="Other" name="Gender" value="Other" required>
-                <label for="Other">Other</label>
-                <!-- All radio inputs share the same name (Gender) so only one can be selected -->
-            </fieldset>
-            <br>
+            <section class="form-section">
+                <h2>Personal Details</h2>
+                <div class="form-group">
+                    <label for="First_Name">First Name:</label>
+                    <input type="text" id="First_Name" name="First_Name" required maxlength="20" pattern="[A-Za-z ]{1,20}" title="20 Alphabetic Characters Max">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Last_Name">Last Name:</label>
+                    <input type="text" id="Last_Name" name="Last_Name" required pattern="[A-Za-z ]{1,20}" maxlength="20" title="20 Alphabetic Characters Max">
+                </div>
+                
+                <div class="form-group">
+                    <label for="DOB">Date of Birth:</label>
+                    <input type="text" id="DOB" name="DOB" placeholder="dd/mm/yyyy" 
+                    pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" title="Enter date in dd/mm/yyyy format" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <fieldset>
+                        <legend>Select your gender</legend>
+                        <div class="radio-group">
+                            <input type="radio" id="Male" name="Gender" value="Male" required>
+                            <label for="Male">Male</label>
+                            
+                            <input type="radio" id="Female" name="Gender" value="Female" required>
+                            <label for="Female">Female</label>
+                            
+                            <input type="radio" id="Other" name="Gender" value="Other" required>
+                            <label for="Other">Other</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </section>
+            
             <!-- SECTION 3: ADDRESS DETAILS -->
-            <label for="Street_Address">Street Address:</label>
-            <input type="text" id="Street_Address" name="Street_Address" required maxlength="40"
-                title="40 Characters Max">
-            <br>
-            <br>
-            <label for="Suburb/Town">Suburb:</label>
-            <input type="text" id="Suburb/Town" name="Suburb/Town" required maxlength="40" title="40 Characters Max">
-            <br>
-            <br>
-            <label for="State">State:</label>
-            <select id="State" name="State" required>
-                <!-- Dropdown for state selection -->
-                <option value="" disabled selected>Select your state</option>
-                <!-- Disabled placeholder option -->
-                <option value="VIC">VIC</option>
-                <option value="NSW">NSW</option>
-                <option value="QLD">QLD</option>
-                <option value="NT">NT</option>
-                <option value="WA">WA</option>
-                <option value="SA">SA</option>
-                <option value="TAS">TAS</option>
-                <option value="ACT">ACT</option>
-            </select>
-            <br>
-            <br>
-            <label for="Postcode">Postcode:</label>
-            <input type="text" id="Postcode" name="Postcode" required pattern="\d{4}" maxlength="4"
-                title="4 Digit Postcode">
-            <!-- Ensures postcode is exactly 4 numbers -->
-            <br>
-            <br>
+            <section class="form-section">
+                <h2>Address Details</h2>
+                <div class="form-group">
+                    <label for="Street_Address">Street Address:</label>
+                    <input type="text" id="Street_Address" name="Street_Address" required maxlength="40" title="40 Characters Max">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Suburb/Town">Suburb:</label>
+                    <input type="text" id="Suburb/Town" name="Suburb/Town" required maxlength="40" title="40 Characters Max">
+                </div>
+                
+                <div class="form-group">
+                    <label for="State">State:</label>
+                    <select id="State" name="State" required>
+                        <option value="" disabled selected>Select your state</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Postcode">Postcode:</label>
+                    <input type="text" id="Postcode" name="Postcode" required pattern="\d{4}" maxlength="4" title="4 Digit Postcode">
+                </div>
+            </section>
+            
             <!-- SECTION 4: CONTACT DETAILS -->
-            <label for="Email">Email:</label>
-            <input type="email" id="Email" name="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                title="Enter a valid email address">
-            <!-- Input type=email already validates, pattern makes it stricter -->
-            <br>
-            <br>
-            <label for="Phone">Phone Number:</label>
-            <input type="tel" id="Phone" name="Phone" required pattern="\d{8,12}" maxlength="12"
-                title="8-12 Digit Phone Number">
-            <!-- Only digits allowed, between 8 and 12 numbers -->
-            <br>
-            <br>
+            <section class="form-section">
+                <h2>Contact Details</h2>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Phone">Phone Number:</label>
+                    <input type="tel" id="Phone" name="Phone" required pattern="\d{8,12}" maxlength="12" title="8-12 Digit Phone Number">
+                </div>
+            </section>
+            
             <!-- SECTION 5: SKILLS AND EXPERIENCE -->
-            <p style="display: inline; font-weight: bold;">Skills:</p>
-            <!-- Checkboxes allow multiple skills to be chosen -->
-            <input type="checkbox" id="Skill1" name="Skills[]" value="Programming" required
-                title="Select at least one skill">
-            <label for="Skill1">Programming</label>
-            <input type="checkbox" id="Skill2" name="Skills[]" value="Web Development">
-            <label for="Skill2">Web Development</label>
-            <input type="checkbox" id="Skill3" name="Skills[]" value="Data Analysis">
-            <label for="Skill3">Data Analysis</label>
-            <input type="checkbox" id="Skill4" name="Skills[]" value="Project Management">
-            <label for="Skill4">Project Management</label>
-            <input type="checkbox" id="Skill5" name="Skills[]" value="Cybersecurity">
-            <label for="Skill5">Cybersecurity</label>
-            <input type="checkbox" id="Skill6" name="Skills[]" value="Cloud Computing">
-            <label for="Skill6">Cloud Computing</label>
-            <input type="checkbox" id="Skill7" name="Skills[]" value="AI and Machine Learning">
-            <label for="Skill7">AI and Machine Learning</label>
-            <input type="checkbox" id="Skill8" name="Skills[]" value="Other">
-            <label for="Skill8">Other</label>
-            <br>
-            <br>
-            <label for="Other_Skills">If Other, please specify:</label>
-            <!-- If "Other" is selected, applicant can specify extra skills -->
-            <br>
-            <textarea id="Other_Skills" name="Other_Skills" rows="5" cols="50"></textarea>
-            <!-- Multiline text input area -->
-            <br>
-            <br>
+            <section class="form-section">
+                <h2>Skills and Experience</h2>
+                <div class="form-group">
+                    <label>Skills:</label>
+                    <fieldset>
+                        <legend>Select Your Skills:</legend>
+                         <div class="checkbox-group">
+                            <dl class="skills-list">
+                                <div>
+                                    <dt><input type="checkbox" id="Skill1" name="Skills[]" value="Programming" required title="Select at least one skill"></dt>
+                                    <dd><label for="Skill1">Programming</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill2" name="Skills[]" value="Web Development"></dt>
+                                    <dd><label for="Skill2">Web Development</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill3" name="Skills[]" value="Data Analysis"></dt>
+                                    <dd><label for="Skill3">Data Analysis</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill4" name="Skills[]" value="Project Management"></dt>
+                                    <dd><label for="Skill4">Project Management</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill5" name="Skills[]" value="Cybersecurity"></dt>
+                                    <dd><label for="Skill5">Cybersecurity</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill6" name="Skills[]" value="Cloud Computing"></dt>
+                                    <dd><label for="Skill6">Cloud Computing</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill7" name="Skills[]" value="AI and Machine Learning"></dt>
+                                    <dd><label for="Skill7">AI and Machine Learning</label></dd>
+                                </div>
+
+                                <div>
+                                    <dt><input type="checkbox" id="Skill8" name="Skills[]" value="Other"></dt>
+                                    <dd><label for="Skill8">Other</label></dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Other_Skills">If Other, please specify:</label>
+                    <textarea id="Other_Skills" name="Other_Skills" rows="5"></textarea>
+                </div>
+            </section>
+            
             <!-- SECTION 6: FORM CONTROL -->
-            <input type="submit" value="Submit Application">
-            <!-- Submit button to send the form data -->
-            <input type="reset" value="Reset Application Form">
-            <!-- Reset button to clear the form fields -->
+            <div class="form-actions">
+                <input type="submit" value="Submit Application">
+                <input type="reset" value="Reset Application Form">
+            </div>
         </form>
-        <!-- APPLICATION FORM END -->
     </main>
 </body>
-
 </html>
