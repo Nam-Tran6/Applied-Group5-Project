@@ -14,7 +14,7 @@ description: layout for all four html pages
 }
 
 * {
-    font-family: OCR-A-STD; /* Apply font to all elements */
+    font-family: OCR-A-STD, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif /* Apply font to all elements */
 }
 
 /* === HEADER SECTION === */
