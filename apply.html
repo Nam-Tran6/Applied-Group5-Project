@@ -2,72 +2,26 @@
 <html lang="en">
 
 <head>
+    <!--Meta Tag-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sokna David Heang">
     <meta name="description" content="page for applying for Tech Talent">
     <meta name="keywords" content="Tech Talent, Application">
+
+    <!--Title-->
     <title>Application</title>
+
+    <!--Link to Stylesheet-->
     <link rel="stylesheet" href="styles/layout.css" type="text/css"> 
     
     <style>
-        /* Main content styles */
+        /* Adjust size of main*/
         main {
             max-width: 800px; /* Restricts content width for better readability */
-            margin: 2rem auto;  /* Centers the <main> horizontally with vertical spacing */
-            padding: 0 2rem;  /* Adds padding on left/right to avoid edge collisions */
+            margin: 2rem auto;  /* Horizontally center + Vertical spacing */
         }
-        
-      
-        /* Submit button */
-        input[type="submit"] {
-            background-color: #333; /* Dark background */
-            color: white;  /* White text for contrast */
-        }
-        
-        input[type="submit"]:hover {
-            background-color: #555; /* Lighter gray on hover */
-        }
-        /* Reset button */
-        input[type="reset"] {
-            background-color: #e0e0e0; /* Light gray background */
-            color: #333; /* Dark text */
-        }
-        
-        input[type="reset"]:hover {
-            background-color: #d0d0d0; /* Slightly darker gray on hover */
-        }
-       label {
-        font-weight: bold;
-        /* Makes labels bold */
-        color: black;
-        /* black text */
-    }
-
-    fieldset {
-        border: 2px solid blue;
-        /* Blue border around gender group */
-        padding: 10px;
-        /* Space inside the box */
-        background-color: lightgray;
-        /* Light gray background */
-    }
-
-    #ptitle {
-        border-bottom: 2px solid lightgray;
-        /* lightgray underline for the title */
-        margin-top: 10px;
-    }
-
-    /* style for job.html */
-
-/* Main content area */
-#jobMain {
-    max-width: 100%;   /* make main content span the full width */
-    margin: 16px auto; /* add vertical spacing above and below main, auto keeps it centered */
-}
   
-/* Apply Form styles */
         form {
             display: grid; /* Uses CSS Grid for structured spacing */
             gap: 1.5rem;    /* Space between form sections */
@@ -77,7 +31,6 @@
             display: grid; /* Allows inner elements to align neatly */
             gap: 1rem; /* Space between child elements */
             padding: 1.5rem; /* Inner padding for breathing room */
-            border: 1px solid #e0e0e0; /* Light gray border */
             border-radius: 8px; /* Rounded corners */
             background-color: #f9f9f9; /* Subtle background for separation */
         }
@@ -87,75 +40,18 @@
             font-size: 1.2rem; /* Slightly smaller than main heading */
             color: #333;  /* Dark gray text for readability */
         }
-        
-         
-
-
-/* Job article container */
-.jobarticle {
-    border: 1px solid #e6e6e6; /* light gray border around each job listing */
-    padding: 18px;             /* space inside the box (around text) */
-    border-radius: 8px;        /* rounded corners */
-    margin-bottom: 18px;       /* space between this box and the next one */
-    background: transparent;   /* background is transparent (shows page background) */
-}
-
-/* Headings (h1 and h2) */
-h1, h2 {
-    margin: 0 0 8px; /* no top margin, 8px bottom margin for spacing */
-}
-
-/* General text styling */
-p, li, h3, h4, dt, dd {
-    color: black; /* make all paragraphs, list items, headings 3–4, 
-                     and description list terms/descriptions white */
-}
-
-
-footer p:last-child {
-    float:right;
-    text-align:right; /* floats right and text-align right*/
-}
-
-        .checkbox-group {
-            display: flex; /* By default aligns items horizontally */
-            margin-bottom: 15px;  /* Spacing between checkbox groups */
-        }
 
         .checkbox-group dt { 
             clear: left;  /* Ensures each <dt> starts on new line */
-             float: left;  /* Floats the checkbox description term left */
+            float: left;  /* Floats the checkbox description term left */
         }
-       
-        .checkbox-group dd {
-            width: 55%;  /* Description takes 55% of the total width */
-	    }
 
-        label {
-            font-weight: bold; /* Makes labels stand out */
-            color: black; /* Ensures high contrast readability */
-        }
-        
         input, select, textarea {
-            padding: 0.75rem;  /* Comfortable input size */
+            padding: 0.75rem;  /* Space between input size */
             border: 1px solid #ccc; /* Neutral border */
             border-radius: 16px; /* Rounded corners */
             font-size: 1rem; /* Readable font size */
             transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus transitions */
-        }
-        
-        input:focus, select:focus, textarea:focus {
-            outline: none; /* Removes default outline */
-            border-color: #666; /* Darker border on focus */
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle glow for accessibility */
-        }
-        
-        fieldset {
-            border: 2px solid black; /* Distinct border */
-            padding: 10px; /* Space inside the box */
-            background-color: lightgray; /* Highlight background */
-            border-radius: 4px; /* Rounded corners */
-            grid-column: 1 / -1; /* Makes fieldset span entire grid width */
         }
         
         legend {
@@ -172,9 +68,6 @@ footer p:last-child {
         
         .radio-group label {
             font-weight: normal; /* Radios don’t need bold labels */
-            display: flex;
-            align-items: center; /* Aligns radio input with text */
-            gap: 0.5rem; /* Space between circle and text */
         }
        
         .form-actions {
@@ -192,11 +85,6 @@ footer p:last-child {
             cursor: pointer; /* Pointer cursor on hover */
             transition: background-color 0.3s; /* Smooth hover effect */
         }
-
-/* Salary text */
-.salary {
-    font-weight: 600; /* make salary text bold */
-}
     </style>
 
 <body>
@@ -392,4 +280,5 @@ footer p:last-child {
         </form>
     </main>
 </body>
+
 </html>

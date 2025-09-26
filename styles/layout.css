@@ -122,3 +122,43 @@ body {
     margin: 0; /* ensures background wraps around body*/
     padding: 0; /*removes padding*/
 }
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #333; /* Dark background */
+    color: white;  /* White text for contrast */
+}
+
+/* Submit Button on Hover*/
+input[type="submit"]:hover {
+    background-color: #555; /* Lighter gray on hover */
+}
+        
+/* Reset button */
+input[type="reset"] {
+    background-color: #e0e0e0; /* Light gray background */
+    color: #333; /* Dark text */
+}
+
+/* Reset Button on Hover*/
+input[type="reset"]:hover {
+    background-color: #d0d0d0; /* Slightly darker gray on hover */
+}
+
+/* Label CSS*/
+label {
+    font-weight: bold; /* Makes labels stand out */
+    color: black; /* Ensures high contrast readability */
+}
+
+/* fieldset CSS*/
+fieldset {
+    border: 2px solid black; /* Black border around gender group */
+    padding: 10px; /* Space inside the box */
+    background-color: lightgray; /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+}
+
+p, li, h3, h4, dt, dd {
+    color: #333; /* make all p, list items, headings 3–4 & des list dark grey */
+}
