@@ -13,43 +13,32 @@
         
         <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
         <!--Link to Stylesheet-->
+
         <style>
-        table, th, td {
-            border: 1px solid black;   /* draws the borders */
-            border-collapse: collapse; /* merges double borders */
-        }
-          #heading {
-            color: black;
-        }
+            table, th, td {
+                border: 1px solid black;   /* draws the borders */
+                border-collapse: collapse; /* merges double borders */
+            }
 
-        aside {
-            float: right; /*Aligns to the right*/
-            margin: 5em; /* outside of box*/
-            padding: 1em; /* inside of box*/
-            width: 30%; /* changes the aside shrinks and expands*/
-            border: 2px solid black; /* Adds a 2 pixel solid black line*/
-            border-radius: 14px; /*rounds off rectangle*/
-        }
+            .information {
+                display: grid;
+                margin: 5em; /* outside of box*/
+                padding: 1em; /* inside of box*/
+                width: 30%; /* changes the aside shrinks and expands*/
+                border: 2px solid black; /* Adds a 2 pixel solid black line*/
+                border-radius: 14px; /*rounds off rectangle*/
+            }
 
-        #information {
-            float: left; /* Aligns to the left*/
-            margin: 5em; /* outside of box*/
-            padding: 1em; /* inside of box*/
-            width: 30%; /* changes the aside shrinks and expands*/
-            border: 2px solid black; /* Adds a 2 pixel solid black line*/
-            border-radius: 14px; /*rounds off rectangle*/
-        }
+            #photo {
+                clear: both; /* Moves Photo below*/
+                text-align: center; /* center photo section in middle*/
+            }
 
-        #photo {
-            clear: both; /* Moves Photo below*/
-            text-align: center; /* center photo section in middle*/
-        }
-
-        #funnyfacts {
-            clear: both; /* Moves funnyfact section below aside and information*/
-        }
-    </style>     
-  </head>
+            #funnyfacts {
+                clear: both; /* Moves funnyfact section below aside and information*/
+            }
+        </style>     
+    </head>
 
 <body>
     <header> <!-- Standardized Heading-->
@@ -64,9 +53,9 @@
         </div>
 
         <!--Seperate Slogan on Side-->
-        <aside id= "slogan">
+        <section id= "slogan">
             <h2>A NEW FRONTIER FOR DATA</h2>
-        </aside>
+        </section>
     </header>
 
     <nav> <!--Navigation Bar-->
@@ -78,57 +67,84 @@
         </ul>
     </nav>
  
-        <main> <!-- Main content area of the page -->
-            <h1 id = "heading" style="text-align:center;">Team Profile: The Lads</h1>
-            <!-- Main heading for the page, centered using inline CSS -->
-            
+    <main>
+        <!-- Main heading for the page, centered using inline CSS -->
+        <h1 id = "heading" style="text-align:center;">Team Profile: The Lads</h1>
+        
+        <section class="information">
+    
+            <!--Class Day and Time Aside Text-->
             <aside>
-                <h2>Class Day &amp; Time</h2>
-                    <!-- Subheading introducing the class schedule -->
-                <ul>  
-                <!-- Unordered list to display class day and time -->
-                    <li>Day
-                        <ul>
-                            <li>Thursday</li>                       
-                        </ul>
-                    </li>
-                    <li>Time
-                        <ul>
-                            <li>12:30 PM - 2:30 PM</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class = "aside-stuff">
+                    <!-- Unordered list to display class day and time -->
+                    <h2>Class Day &amp; Time</h2>
+                    <ul>
+                        <!--Day list-->
+                        <li>Day
+                            <ul>
+                                <li>Thursday</li>                       
+                            </ul>
+                        </li>
+                    
+                        <!--Time List-->
+                        <li>Time
+                            <ul>
+                                <li>12:30 PM - 2:30 PM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="aside-stuff">
+                    <!--Description List for Student IDs-->
+                    <h2>Student ID</h2>
+                    <ul>  
+                        <dl>
+		                    <dt>Kha Nam Tran</dt>
+			                    <dd>104555355</dd>
+                            <dt>Sokna David Hoang</dt>
+			                    <dd>105962079</dd>
+                            <dt>Sothearith Kuy</dt>
+			                    <dd>105069886</dd>
+                        </dl> 
+                    </ul>
+                </div>    
             </aside>
+        </section>
 
-            <section id="information">
-                 <h2>Member Contributions &amp; Quotes</h2>
-                <!-- Subheading introducing the contributions section -->
-                <dl>
-                <!-- Description list-->
-                <!-- Member 1 -->
-                    <dt>Kha Nam Tran — Front-end Lead</dt>
-                    <dd>Contribution: Coded index.html + style.css</dd>
-                    <dd>Quote: "Viciously Coding"</dd>
-                    <dd>Favorite Language: French</dd>
-                    <dd>Translation: Codage vicieux</dd>
-                    <br>
-                <!-- Member 2 -->
-                    <dt>Sothearith Kuy— Front-end Engineer</dt>
-                    <dd>Contribution: Coded job.html</dd>
-                    <dd>Quote: "Code Breaker"</dd>
-                    <dd>Favourite language: Spanish</dd>
-                    <dd>Translation: descifrador de códigos</dd>
-                    <br>
-                <!-- Member 3 -->
-                    <dt>Sokna David Heang — Front-end Engineer</dt>
-                    <dd>Contribution: Coded about.html + apply.html</dd>
-                    <dd>Quote: "Eat, Sleep, Code, Repeat"</dd>
-                    <dd>Favourite language: German</dd>
-                    <dd>Translation: Essen, Schlafen, Code, Wiederholen</dd>
-                </dl>
-            </section>
+        <section class="information">
+            <h2>Member Contributions &amp; Quotes</h2>
+            <!-- Subheading introducing the contributions section -->
+            <dl>
 
-            <!--Section detailing Photo-->
+                <!-- Description list for Kha Nam Tran-->
+                <dt>Kha Nam Tran — Front-end Lead</dt>
+                <dd>Contribution: Coded index.html + style.css</dd>
+                <dd>Quote: "Viciously Coding"</dd>
+                <dd>Favorite Language: French</dd>
+                <dd>Translation: Codage vicieux</dd>
+
+                <br>
+
+                <!-- Description list for Sothearith Kuy -->
+                <dt>Sothearith Kuy— Front-end Engineer</dt>
+                <dd>Contribution: Coded job.html</dd>
+                <dd>Quote: "Code Breaker"</dd>
+                <dd>Favourite language: Spanish</dd>
+                <dd>Translation: descifrador de códigos</dd>
+
+                <br>
+
+                <!-- Description list for Sokna David Heang -->
+                <dt>Sokna David Heang — Front-end Engineer</dt>
+                <dd>Contribution: Coded about.html + apply.html</dd>
+                <dd>Quote: "Eat, Sleep, Code, Repeat"</dd>
+                <dd>Favourite language: German</dd>
+                <dd>Translation: Essen, Schlafen, Code, Wiederholen</dd>
+            </dl>
+        </section>
+
+        <!--Section detailing Photo-->
             <section id = "photo">
                 <h2>Group Photo</h2>
                 <hr>
@@ -196,10 +212,16 @@
             </section>
         </main>
 
-        <br>
+        <br> <!--Adds break against Perks and Practicals-->
 
-        <footer>
-            <hr style ="height:30px">
+        <footer style="clear:both">
+            <!--Jira Link-->
+            <p><a href="https://sothearithkuy37.atlassian.net/jira/software/projects/A1/summary"
+            title="This takes you to Jira">Jira Link</a></p>
+            <!--Github Link-->
+            <a href="https://github.com/Nam-Tran6/Applied-Group5-Project">Github Link</a>
+            <!-- Email Link-->
+            <a href="mailto:info@companyname.com">Email</a>
         </footer>
     </body>
 
