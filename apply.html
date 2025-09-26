@@ -9,6 +9,7 @@
     <meta name="keywords" content="Tech Talent, Application">
     <title>Application</title>
     <link rel="stylesheet" href="styles/layout.css" type="text/css"> 
+    
     <style>
         /* Main content styles */
         main {
@@ -57,29 +58,173 @@
         /* lightgray underline for the title */
         margin-top: 10px;
     }
-    </style>
-</head>
+
+    /* style for job.html */
+
+/* Main content area */
+#jobMain {
+    max-width: 100%;   /* make main content span the full width */
+    margin: 16px auto; /* add vertical spacing above and below main, auto keeps it centered */
+}
   
+/* Apply Form styles */
+        form {
+            display: grid; /* Uses CSS Grid for structured spacing */
+            gap: 1.5rem;    /* Space between form sections */
+        }
+        
+        .form-section {
+            display: grid; /* Allows inner elements to align neatly */
+            gap: 1rem; /* Space between child elements */
+            padding: 1.5rem; /* Inner padding for breathing room */
+            border: 1px solid #e0e0e0; /* Light gray border */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #f9f9f9; /* Subtle background for separation */
+        }
+        
+        .form-section h2 {
+            margin: 0 0 0.5rem 0; /* Removes top margin, keeps bottom gap */
+            font-size: 1.2rem; /* Slightly smaller than main heading */
+            color: #333;  /* Dark gray text for readability */
+        }
+        
+         
+
+
+/* Job article container */
+.jobarticle {
+    border: 1px solid #e6e6e6; /* light gray border around each job listing */
+    padding: 18px;             /* space inside the box (around text) */
+    border-radius: 8px;        /* rounded corners */
+    margin-bottom: 18px;       /* space between this box and the next one */
+    background: transparent;   /* background is transparent (shows page background) */
+}
+
+/* Headings (h1 and h2) */
+h1, h2 {
+    margin: 0 0 8px; /* no top margin, 8px bottom margin for spacing */
+}
+
+/* General text styling */
+p, li, h3, h4, dt, dd {
+    color: black; /* make all paragraphs, list items, headings 3–4, 
+                     and description list terms/descriptions white */
+}
+
+
+footer p:last-child {
+    float:right;
+    text-align:right; /* floats right and text-align right*/
+}
+
+        .checkbox-group {
+            display: flex; /* By default aligns items horizontally */
+            margin-bottom: 15px;  /* Spacing between checkbox groups */
+        }
+
+        .checkbox-group dt { 
+            clear: left;  /* Ensures each <dt> starts on new line */
+             float: left;  /* Floats the checkbox description term left */
+        }
+       
+        .checkbox-group dd {
+            width: 55%;  /* Description takes 55% of the total width */
+	    }
+
+        label {
+            font-weight: bold; /* Makes labels stand out */
+            color: black; /* Ensures high contrast readability */
+        }
+        
+        input, select, textarea {
+            padding: 0.75rem;  /* Comfortable input size */
+            border: 1px solid #ccc; /* Neutral border */
+            border-radius: 16px; /* Rounded corners */
+            font-size: 1rem; /* Readable font size */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus transitions */
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none; /* Removes default outline */
+            border-color: #666; /* Darker border on focus */
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle glow for accessibility */
+        }
+        
+        fieldset {
+            border: 2px solid black; /* Distinct border */
+            padding: 10px; /* Space inside the box */
+            background-color: lightgray; /* Highlight background */
+            border-radius: 4px; /* Rounded corners */
+            grid-column: 1 / -1; /* Makes fieldset span entire grid width */
+        }
+        
+        legend {
+            font-weight: bold; /* Emphasizes section title */
+            padding: 0 0.5rem; /* Small spacing around legend text */
+        }
+        
+        .radio-group {
+            display: flex; /* Aligns radios horizontally */
+            flex-wrap: wrap; /* Wraps onto new line if space is tight */
+            gap: 1rem;  /* Space between each option */
+            margin-top: 0.5rem;  /* Space above group */
+        }
+        
+        .radio-group label {
+            font-weight: normal; /* Radios don’t need bold labels */
+            display: flex;
+            align-items: center; /* Aligns radio input with text */
+            gap: 0.5rem; /* Space between circle and text */
+        }
+       
+        .form-actions {
+            display: flex; /* Aligns buttons in a row */
+            justify-content: center;  /* Centers buttons */
+            gap: 1rem; /* Space between buttons */
+            margin-top: 1rem; /* Space above action row */
+        }
+        
+        input[type="submit"], input[type="reset"] {
+            padding: 0.75rem 2rem; /* Big click/tap target */
+            border: none; /* No default borders */
+            border-radius: 4px; /* Rounded buttons */
+            font-weight: bold; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+
+/* Salary text */
+.salary {
+    font-weight: 600; /* make salary text bold */
+}
+    </style>
+
 <body>
-    <header>
-        <section id="mainheading">
-            <figure class="Logo">
-                <a href="images/Box.png">
-                    <img src="./images/Box.png" alt="Logo of Startup" title="Logo" width="60" height="60">
-                </a>
-            </figure>
-            <div>
-                <h1 class="Logo">THE BOX</h1>
-                <h2 id="slogan">Infinitively Squared</h2>
-            </div>
-        </section>
-        <nav>
-            <p class="menu"><a href="index.html">INDEX</a></p>
-            <p class="menu"><a href="job.html">JOBS</a></p>
-            <p class="menu"><a href="apply.html">APPLY</a></p>
-            <p class="menu"><a href="about.html">ABOUT</a></p>
-        </nav>
+    <header> <!-- Standardized Heading-->
+
+        <!--Logo Image-->
+        <img id = "logo" src="images/Storage.png" alt="image of storage box">
+
+        <!--Main Heading Information-->
+        <div id="title"> 
+            <h1>THE BOX</h1>
+            <p>Infinitively Squared</p> 
+        </div>
+
+        <!--Seperate Slogan on Side-->
+        <aside id= "slogan">
+            <h2>A NEW FRONTIER FOR DATA</h2>
+        </aside>
     </header>
+
+    <nav> <!--Navigation Bar-->
+        <ul> <!--Unordered List-->
+            <li><a href="index.html">HOME</a></li> <!--Home Link-->
+            <li><a href="job.html">JOBS</a></li> <!--Jobs Link-->
+            <li><a href="apply.html">APPLY</a></li> <!--Apply Link-->
+            <li><a href="about.html">ABOUT</a></li> <!--About Link-->
+        </ul>
+    </nav>
     
     <main>
         <h2 style="text-align:center;">Tech Talent Application Form</h2>
