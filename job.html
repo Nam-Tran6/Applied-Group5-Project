@@ -28,12 +28,14 @@
         /* Positions the <aside> element on the right side, allowing other content to flow around it. */
         margin-top: 4px;
         /* Adds 4px of space above the <aside> element. */
-        border: 1px solid black;
+        border: 2px solid black;
         /* Gives the <aside> element a 1px solid white border. */
         padding: 1em;
         /* Adds inner spacing (padding) of 1em inside the <aside>, so its content doesn’t touch the border. */
         box-sizing: border-box;
         /* Ensures width includes padding and border, preventing the box from expanding beyond 25%. */
+        border-radius: 8px;
+        /* Rounds the corners of the <article> border with an 8px radius. */
     }
 
     article {
@@ -48,25 +50,48 @@
         background: transparent;
         /* Makes the background see-through (inherits the parent’s background). */
     }
+
+    .applybtn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 600px;
+        /*make the font weight to semi-bold*/
+        color: white;
+        margin-top: 10px;
+        background: #0073e6;
+        /* Job site style blue */
+        border-radius: 8px;
+        text-decoration: none;
+
+    }
 </style>
 <!-- All these job description is from GenAI (ChatGPT)-->
 
 <body>
-    <header id="jobheader"> <!-- The header section of the page with an ID "jobheader". 
-                                             Typically used for the top branding/logo/title area. -->
-        <div class="logo-box"></div> <!-- An empty box reserved for a logo (styled later with CSS). -->
-        <div class="title"> <!-- A container for the site title and subtitle. -->
-            <h1>THE BOX</h1> <!-- Main heading of the page/website (the company or site name). -->
-            <p>Infinitively Squared</p> <!-- Subtitle or slogan of the site. -->
+    <header> <!-- Standardized Heading-->
+
+        <!--Logo Image-->
+        <img id = "logo" src="images/Storage.png" alt="image of storage box">
+
+        <!--Main Heading Information-->
+        <div id="title"> 
+            <h1>THE BOX</h1>
+            <p>Infinitively Squared</p> 
         </div>
+
+        <!--Seperate Slogan on Side-->
+        <aside id= "slogan">
+            <h2>A NEW FRONTIER FOR DATA</h2>
+        </aside>
     </header>
 
-    <nav> <!-- The navigation bar of the site. -->
-        <ul> <!-- Unordered list to hold the navigation links. -->
-            <li><a href="index.html">HOME</a></li> <!-- List item with a link to the home page. -->
-            <li><a href="job.html">JOBS</a></li> <!-- Link to the jobs page. -->
-            <li><a href="apply.html">APPLY</a></li> <!-- Link to the apply page (for applications). -->
-            <li><a href="about.html">ABOUT</a></li> <!-- Link to the about page (company details). -->
+    <nav> <!--Navigation Bar-->
+        <ul> <!--Unordered List-->
+            <li><a href="index.html">HOME</a></li> <!--Home Link-->
+            <li><a href="job.html">JOBS</a></li> <!--Jobs Link-->
+            <li><a href="apply.html">APPLY</a></li> <!--Apply Link-->
+            <li><a href="about.html">ABOUT</a></li> <!--About Link-->
         </ul>
     </nav>
 
@@ -130,6 +155,7 @@
                     <li>Familiarity with HTML/CSS or React component thinking.</li>
                     <li>Experience in developer tooling, analytics, or B2B workflow products.</li>
                 </ul>
+                <a href="apply.html" class="applybtn">Apply Now</a>
             </article>
 
 
@@ -187,6 +213,7 @@
                     </li>
                     <li>Worked at early-stage startups or on platform/infra teams focused on developer UX.</li>
                 </ul>
+                <a href="apply.html" class="applybtn">Apply Now</a>
             </article>
 
         </section>

@@ -20,46 +20,57 @@
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
 
     <style>
-        .item {
-            margin: auto;
-            width: 50%;
-            border: 2px solid black; /* adds border to labels*/
-            margin-bottom: 30px;
+        .item { /* selects all types of items*/
+            margin: 10em;
+            padding: 3em;
+            color: #1a1a1a;
         } 
 
-        .item h2,p {
-            padding-left: 20px;
+        body {
+            background: url(images/background.png); /* Background illustration*/
+            background-size: cover /* Background cover*/
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            margin: 10em;
+            padding: 1em;
+            background-color: #ccc;
         }
     </style>
 
 </head>
 
 <body>
-    <header id="jobheader"> <!-- Header with ID -->
-        <div class="logo-box"></div> <!-- An empty box reserved for a logo (styled later with CSS). -->
-        <div class="title"> <!-- A container for the site title and subtitle. -->
-            <h1>THE BOX</h1> <!-- Main heading of the page/website (the company or site name). -->
-            <p>Infinitively Squared</p> <!-- Subtitle or slogan of the site. -->
+    <header> <!-- Standardized Heading-->
+        <!--Logo Image-->
+        <img id = "logo" src="images/Storage.png" alt="image of storage box">
+
+        <!--Main Heading Information-->
+        <div id="title"> 
+            <h1>THE BOX</h1>
+            <p>Infinitively Squared</p> 
         </div>
+
+        <!--Seperate Slogan on Side-->
+        <aside id= "slogan">
+            <h2>A NEW FRONTIER FOR DATA</h2>
+        </aside>
     </header>
 
-    <nav> <!-- The navigation bar of the site. -->
-        <ul> <!-- Unordered list to hold the navigation links. -->
-            <li><a href="index.html">HOME</a></li> <!-- List item with a link to the home page. -->
-            <li><a href="job.html">JOBS</a></li> <!-- Link to the jobs page. -->
-            <li><a href="apply.html">APPLY</a></li> <!-- Link to the apply page (for applications). -->
-            <li><a href="about.html">ABOUT</a></li> <!-- Link to the about page (company details). -->
+    <nav> <!--Navigation Bar-->
+        <ul> <!--Unordered List-->
+            <li><a href="index.html">HOME</a></li> <!--Home Link-->
+            <li><a href="job.html">JOBS</a></li> <!--Jobs Link-->
+            <li><a href="apply.html">APPLY</a></li> <!--Apply Link-->
+            <li><a href="about.html">ABOUT</a></li> <!--About Link-->
         </ul>
     </nav>
 
-
     <main>
-        <!--Storage Picture-->
-        <section style="display: flex; justify-content: center; padding-top: 30px; padding-bottom: 30px;">
-            <img id="storageimage" src="images/Storage.png" alt="Image of a Storage Box" title="Storage Box"/>
-        </section>
-        
-        
         <!--Description 1-->
         <section class ="item">
             <h2>What is the BOX?</h2>
@@ -78,12 +89,17 @@
           
             <p> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </p>
         </section>
-        <br>
-        
+
+        <section class="item">
+            <h2>What do we offer?</h2>
+            <p> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </p>
+        </section>
     </main>
 
-    <footer>
+    <!--Catchy Phrase-->
+        <h2 style= "color: #ccc; text-align: center;"> Not Gigabytes, Terrabytes, or even Petabyte. Think as bold as us, think Yottabyte. </h2>
 
+    <footer>
         <!--Jira Link-->
         <p><a href="https://sothearithkuy37.atlassian.net/jira/software/projects/A1/summary"
          title="This takes you to Jira">Jira Link</a></p>

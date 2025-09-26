@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <!-- Charset Declaration -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Viewport Settings for Responsive Design-->
-    <meta name="author" content="Sokna David Heang">
-    <!-- Author Information -->
-    <meta name="description" content="Learn more about our tech startup, and the team behind it.">
-    <!-- Description of the Page -->
-    <meta name="keywords" content="Tech Startup, Applying, Job, Careers">
-    <!-- Keywords for Search Engines -->
-  
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Charset Declaration -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Viewport Settings for Responsive Design-->
+        <meta name="author" content="Sokna David Heang">
+        <!-- Author Information -->
+        <meta name="description" content="Learn more about our tech startup, and the team behind it.">
+        <!-- Description of the Page -->
+        <meta name="keywords" content="Tech Startup, Applying, Job, Careers">
+        <!-- Keywords for Search Engines -->
+        
+        <title>About Us</title> 
+        <!-- Title of the Page (Tab Bar) -->
+        
+        <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
+        <!--Link to Stylesheet-->
+        <style>
         table, th, td {
             border: 1px solid black;   /* draws the borders */
             border-collapse: collapse; /* merges double borders */
         }
-
-        #heading {
+          #heading {
             color: black;
         }
 
@@ -49,31 +52,33 @@
         #funnyfacts {
             clear: both; /* Moves funnyfact section below aside and information*/
         }
-    </style>
-
-    <title>About Us</title>
-    <!-- Title of the Page (Tab Bar) -->
-  
-    <link rel="stylesheet" href="styles/layout.css" type="text/css">
-    <!--Link to Stylesheet-->
-</head>
+    </style>     
+  </head>
 
 <body>
-    <header id="jobheader"> <!-- The header section of the page with an ID "jobheader". 
-                                         Typically used for the top branding/logo/title area. -->
-        <div class="logo-box"></div> <!-- An empty box reserved for a logo (styled later with CSS). -->
-        <div class="title"> <!-- A container for the site title and subtitle. -->
-            <h1>THE BOX</h1> <!-- Main heading of the page/website (the company or site name). -->
-            <p>Infinitively Squared</p> <!-- Subtitle or slogan of the site. -->
+    <header> <!-- Standardized Heading-->
+
+        <!--Logo Image-->
+        <img id = "logo" src="images/Storage.png" alt="image of storage box">
+
+        <!--Main Heading Information-->
+        <div id="title"> 
+            <h1>THE BOX</h1>
+            <p>Infinitively Squared</p> 
         </div>
+
+        <!--Seperate Slogan on Side-->
+        <aside id= "slogan">
+            <h2>A NEW FRONTIER FOR DATA</h2>
+        </aside>
     </header>
 
-    <nav> <!-- The navigation bar of the site. -->
-        <ul> <!-- Unordered list to hold the navigation links. -->
-            <li><a href="index.html">HOME</a></li> <!-- List item with a link to the home page. -->
-            <li><a href="job.html">JOBS</a></li> <!-- Link to the jobs page. -->
-            <li><a href="apply.html">APPLY</a></li> <!-- Link to the apply page (for applications). -->
-            <li><a href="about.html">ABOUT</a></li> <!-- Link to the about page (company details). -->
+    <nav> <!--Navigation Bar-->
+        <ul> <!--Unordered List-->
+            <li><a href="index.html">HOME</a></li> <!--Home Link-->
+            <li><a href="job.html">JOBS</a></li> <!--Jobs Link-->
+            <li><a href="apply.html">APPLY</a></li> <!--Apply Link-->
+            <li><a href="about.html">ABOUT</a></li> <!--About Link-->
         </ul>
     </nav>
  
@@ -201,4 +206,5 @@
             <hr style ="height:30px">
         </footer>
     </body>
+
 </html>
