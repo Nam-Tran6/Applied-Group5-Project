@@ -3,53 +3,52 @@
 
 <head>
     <!--Meta Tags-->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="General details about our company" />
-    <meta name="keywords" content="Company Details, Common Navigation, Jira & Github link" />
-    <meta name="author" content="Sothearith Kuy" />
+    <meta name="description" content="General details about our company">
+    <meta name="keywords" content="Company Details, Common Navigation, Jira & Github link">
+    <meta name="author" content="Sothearith Kuy">
 
     <!--Title-->
     <title>Job Info</title>
 
     <!--Link to Stylesheet-->
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
+
+    <style>
+        aside {
+            float: right;
+            width: 25%; /* Width of <aside> 25% to parentcontainer. */
+            padding: 10px; /* Adds space between border and text */
+            margin-top: 1em; /* Aligning with apply*/
+            border-radius: 8px; /* Rounds corners of border with an 8px radius. */
+            background-color: white; /*White Blackground */
+        }
+
+        article {
+            padding: 18px; /* 18px of inner spacing */
+            border-radius: 8px; /* Rounds corners of the border with an 8px radius. */
+            background-color: white; /*White Background*/
+        }
+
+        .applybtn {
+            display: inline-block; /* Button is horizontal*/
+            padding: 12px 24px; /* Space between text and border*/
+            font-size: 16px; /* Applies font changes*/
+            color: white; /* button color is white*/
+            margin-top: 10px; /* slight top margin for importance*/
+            background: #0073e6; /* Job site style blue */
+            border-radius: 8px; /* Corner round off 8px*/
+            text-decoration: none; /* Removes underline*/
+        }
+    </style>
 </head>
-
-<style>
-    aside {
-        float: right;
-        width: 25%; /* Width of <aside> 25% to parentcontainer. */
-        border: 2px solid black; /* Adds a 2 pixel solid border */
-        padding: 10px; /* Adds space between border and text */
-        margin-top: 1em; /* Aligning with apply*/
-        border-radius: 8px; /* Rounds corners of border with an 8px radius. */
-    }
-
-    article {
-        border: 2px solid black; /* Gives the <article> element a 2px solid black border. */
-        padding: 18px; /* 18px of inner spacing */
-        border-radius: 8px; /* Rounds corners of the border with an 8px radius. */
-    }
-
-    .applybtn {
-        display: inline-block; /* Button is horizontal*/
-        padding: 12px 24px; /* Space between text and border*/
-        font-size: 16px; /* Applies font changes*/
-        font-weight: 600px; /*make the font weight to semi-bold*/
-        color: white; /* button color is white*/
-        margin-top: 10px; /* slight top margin for importance*/
-        background: #0073e6; /* Job site style blue */
-        border-radius: 8px; /* Corner round off 8px*/
-        text-decoration: none; /* Removes underline*/
-    }
-</style>
 
 <body>
     <header> <!-- Standardized Heading-->
 
         <!--Logo Image-->
-        <img id = "logo" src="images/Storage.png" alt="image of storage box">
+        <img id = "logo" src="images/Storage.png" alt="Diagram of four stacked gray layers">
 
         <!--Main Heading Information-->
         <div id="title"> 
@@ -190,18 +189,17 @@
             <!--Embedded Style to make font black-->
             <h2 style="color: black;">How to apply</h2>
 
-            <p> Send a one-page cover note and portfolio or GitHub link to
-                <!--Link to Email--> 
-                <ahref=" mailto:jobs@email.com>jobs@example.com</ahref=> 
-                with the reference code in the subject line.
+            <p> Send a one-page cover note and portfolio or GitHub link to </p>
+            <!--Link to Email--> 
+            <a href= "mailto:jobs@email.com">jobs@example.com with the reference code in the subject line.</a>
+
+            <p> We review applications on a rolling basis and aim for an interview loop that includes a short design/code
+                exercise and two cross-functional interviews.
             </p>
             
-            <p> We review applications on a rolling basis and aim for an interview loop that includes a short design/code
-                exercise and two cross-functional interviews.</p>
-            
             <p> Company is an equal-opportunity employer. Candidates must be authorized to work in the country they apply
-                from. </p>
-
+                from. 
+            </p>
         </section>
 
         <!-- Aside for Perks and practicals.-->
