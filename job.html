@@ -22,51 +22,36 @@
 
 <style>
     aside {
-        width: 25%;
-        /* Sets the width of the <aside> element to 25% of its parent container. */
         float: right;
-        /* Positions the <aside> element on the right side, allowing other content to flow around it. */
-        margin-top: 4px;
-        /* Adds 4px of space above the <aside> element. */
-        border: 2px solid black;
-        /* Gives the <aside> element a 1px solid white border. */
-        padding: 1em;
-        /* Adds inner spacing (padding) of 1em inside the <aside>, so its content doesn’t touch the border. */
-        box-sizing: border-box;
-        /* Ensures width includes padding and border, preventing the box from expanding beyond 25%. */
-        border-radius: 8px;
-        /* Rounds the corners of the <article> border with an 8px radius. */
+        width: 25%; /* Width of <aside> 25% to parentcontainer. */
+        border: 2px solid black; /* Adds a 2 pixel solid border */
+        padding: 1em; /* Adds space between border and text */
+        border-radius: 8px; /* Rounds corners of border with an 8px radius. */
     }
 
     article {
-        border: 2px solid black;
-        /* Gives the <article> element a 2px solid white border. */
-        padding: 18px;
-        /* Adds 18px of inner spacing inside the <article>. */
-        border-radius: 8px;
-        /* Rounds the corners of the <article> border with an 8px radius. */
-        margin-bottom: 18px;
-        /* Adds 18px of space below each <article>, separating it from elements beneath. */
-        background: transparent;
-        /* Makes the background see-through (inherits the parent’s background). */
+        border: 2px solid black; /* Gives the <article> element a 2px solid black border. */
+        padding: 18px; /* 18px of inner spacing */
+        border-radius: 8px; /* Rounds corners of the border with an 8px radius. */
     }
 
     .applybtn {
-        display: inline-block;
-        padding: 12px 24px;
-        font-size: 16px;
-        font-weight: 600px;
-        /*make the font weight to semi-bold*/
-        color: white;
-        margin-top: 10px;
-        background: #0073e6;
-        /* Job site style blue */
-        border-radius: 8px;
-        text-decoration: none;
+        display: inline-block; /* Button is horizontal*/
+        padding: 12px 24px; /* Space between text and border*/
+        font-size: 16px; /* Applies font changes*/
+        font-weight: 600px; /*make the font weight to semi-bold*/
+        color: white; /* button color is white*/
+        margin-top: 10px; /* slight top margin for importance*/
+        background: #0073e6; /* Job site style blue */
+        border-radius: 8px; /* Corner round off 8px*/
+        text-decoration: none; /* Removes underline*/
+    }
 
+    main {
+        margin: 50px; /* Overwrites CSS Style Margin for format*/
     }
 </style>
-<!-- All these job description is from GenAI (ChatGPT)-->
+
 
 <body>
     <header> <!-- Standardized Heading-->
@@ -95,42 +80,38 @@
         </ul>
     </nav>
 
-    <main id="jobMain">
-        <!-- <section> groups related content. This one is for job openings -->
+<!-- Job Description generated from ChatGPT (We had no idea)-->
+    <main>
+        <!-- <section> groups content for job openings -->
+
+        <!--First Section for Senior Product Designer-->
         <section>
-            <h2 id="openings" style="color: black">Open Positions</h2>
-            <!-- <h2> is a subheading under the main page heading -->
 
+            <!-- Subheading under the main page heading -->
+            <h2 style="color: black">Open Positions</h2> 
 
-            <!-- Each job post is wrapped in an <article> because it is a self-contained piece of content -->
-            <article class="jobarticle">
-                <!-- <article> = represents a single, self-contained piece of content. 
-                     The class "jobarticle" can be used for styling job postings. -->
-
-                <h3 id="refA1B2C-title">Ref: A1B2C — Senior Product Designer</h3>
-                <!-- <h3> is the job title with a unique reference ID ("A1B2C"). 
-                     The id makes it targetable by links or CSS/JS. -->
+            <!-- Used Article instead of section because each section is self-contained-->
+            <article>
+                <!--Unique reference ID ("A1B2C"), makes it targetable.-->
+                <h3>Ref: A1B2C — Senior Product Designer</h3> 
 
                 <!-- Short description/summary of the role -->
-                <p>
+                <p> 
                     Short: Lead product experiences across core flows — from discovery to design handoff.
                     Balance craft with pragmatic delivery.
                 </p>
 
-                <!-- <dl> = description list for structured job info (label + value pairs). -->
+                <!-- Description List Salary and Person they report to -->
                 <dl>
-                    <dt>Salary</dt> <!-- <dt> = definition term (label: "Salary") -->
-                    <dd>USD 120,000–150,000 (dep. on experience) + equity</dd>
-                    <!-- <dd> = definition detail (salary value) -->
+                    <dt>Salary</dt> 
+                    <dd>AUD 120,000 - 150,000 + Employee Equity</dd>
 
-                    <dt>Reporting line</dt> <!-- Another label -->
-                    <dd>Reports to Head of Product</dd> <!-- The value for that label -->
+                    <dt>Reporting line</dt>
+                    <dd>Reports to Head of Product</dd> 
                 </dl>
 
-                <h4>Key responsibilities</h4>
-                <!-- <h4> introduces a subsection of the job posting. -->
-
-                <!-- Ordered list (<ol>) because responsibilities usually follow a logical sequence. -->
+                <!-- Ordered list for Responsibilites-->
+                <h4>Key Responsibilities</h4>
                 <ol>
                     <li>Drive end-to-end design for one product vertical (user research → prototype → handoff).</li>
                     <li>Create and maintain reusable components and patterns in our design system.</li>
@@ -138,105 +119,103 @@
                     <li>Mentor junior designers; run design critiques and usability sessions.</li>
                 </ol>
 
+                <!--Unordered list for Essential Requirements-->
                 <h4>Essential requirements</h4>
-                <!-- <ul> = unordered list for non-sequential requirements. -->
                 <ul>
                     <li>5+ years in product design with shipped SaaS products.</li>
-                    <li>Strong prototyping skills (Figma, interactive prototypes) and practical research experience.
-                    </li>
+                    <li>Strong prototyping skills (Figma, interactive prototypes) and practical research experience.</li>
                     <li>Experience contributing to or maintaining a design system.</li>
-                    <li>Excellent cross-functional communication and a portfolio demonstrating outcomes (not just
-                        screens).</li>
+                    <li>Excellent cross-functional communication and a portfolio demonstrating outcomes (not just 
+                    screens).</li>
                 </ul>
 
-                <h4>Preferable</h4>
                 <!-- Another unordered list for "nice to have" skills. -->
+                <h4>Preferable</h4>
                 <ul>
                     <li>Familiarity with HTML/CSS or React component thinking.</li>
                     <li>Experience in developer tooling, analytics, or B2B workflow products.</li>
                 </ul>
+
+                <!--Button Apply-->
                 <a href="apply.html" class="applybtn">Apply Now</a>
             </article>
 
+            <br> <!--Line Break-->
 
-            <!-- Second job article -->
+            <!-- Second job article for Front-end Engineer-->
             <article>
-                <!-- The <article> element defines a self-contained piece of content 
-                     (in this case, a single job posting). -->
+                <!--Unique reference ID ("D4E5F"), makes it targetable.-->
+                <h3>Ref: D4E5F — Frontend Engineer, Design Systems</h3>
 
-                <h3 id="refD4E5F-title">Ref: D4E5F — Frontend Engineer, Design Systems</h3>
-                <!-- The job title with a unique reference ID (D4E5F). 
-                     The id could be used for linking or styling. -->
-
-                <p>
-                    Short: Build and maintain the design system and component library used by product teams;
-                    reduce design-to-code friction.
-                </p>
                 <!-- A short description/summary of the role. -->
-
+                <p>
+                    Short: Build and maintain the design system and component library used by product teams; reduce 
+                    design-to-code friction.
+                </p>
+                
+                <!-- Description List for Salary and Person to report to -->
                 <dl>
-                    <!-- <dl> defines a Description List, good for structured job details like salary. -->
                     <dt>Salary</dt>
-                    <!-- <dt> = definition term (label) -->
-                    <dd>USD 140,000–170,000 (dep. on experience) + equity</dd>
-                    <!-- <dd> = definition data (value for the label) -->
-
+                        <dd>AUD 140,000 - 170,000 + Employee Equity</dd>
                     <dt>Reporting line</dt>
-                    <dd>Reports to Engineering Manager (Platform)</dd>
+                        <dd>Reports to Engineering Manager (Platform)</dd>
                 </dl>
-                <!-- This block neatly pairs labels (Salary, Reporting line) with their values. -->
 
-                <h4>Key responsibilities</h4>
+                <!-- Ordered list for Responsibilites-->
+                <h4>Key Responsibilities</h4>
                 <ol>
-                    <!-- Ordered list (<ol>) used for tasks/responsibilities, since they follow a sequence or priority. -->
                     <li>Implement accessible, testable UI components as a shared library (React + TypeScript).</li>
                     <li>Integrate design tokens and automate releases for designers and product teams.</li>
-                    <li>Collaborate with designers to translate patterns into code and improve documentation/examples.
-                    </li>
+                    <li>Collaborate with designers to translate patterns into code and improve documentation/examples. </li>
                     <li>Maintain CI, visual regression tests, and versioning for the component library.</li>
                 </ol>
 
+                <!-- Unordered list for Essential Requirements-->
                 <h4>Essential requirements</h4>
                 <ul>
-                    <!-- Unordered list (<ul>) for essential requirements (no particular order). -->
                     <li>4+ years building production React component libraries in TypeScript.</li>
-                    <li>Practical experience with Storybook, unit & visual regression testing, and CSS-in-JS or
-                        utility-first
-                        approaches.</li>
+                    <li>Practical experience with Storybook, unit & visual regression testing, and CSS-in-JS or 
+                    utility-first approaches.</li>
                     <li>Clear communicator who can partner with designers to iterate on accessibility and behavior.</li>
                 </ul>
 
+                <!-- Another unordered list for "nice to have" (non-essential) skills. -->
                 <h4>Preferable</h4>
-                <ul>
-                    <!-- Another unordered list for "nice to have" (non-essential) skills. -->
-                    <li>Experience exporting design tokens from Figma or similar tools and automating token pipelines.
-                    </li>
+                <ul> 
+                    <li>Experience exporting design tokens from Figma or similar tools and automating token pipelines.</li>
                     <li>Worked at early-stage startups or on platform/infra teams focused on developer UX.</li>
                 </ul>
-                <a href="apply.html" class="applybtn">Apply Now</a>
-            </article>
 
+                <!--Button to Apply-->
+                <a href="apply.html?job=A1B2C" class="applybtn">Apply Now</a>
+            </article>
         </section>
 
+        <br>
 
         <!-- Section for instructions on how to apply -->
-        <section>
-            <h2 id="howtoapply" style="color: black;">How to apply</h2>
-            <p>Send a one-page cover note and portfolio or GitHub link to <a
-                    href=" mailto:jobs@email.com">jobs@example.com</a>
-                with the reference code in the subject line.</p>
-            <p>We review applications on a rolling basis and aim for an interview loop that includes a short design/code
-                exercise and two cross-functional interviews.</p>
-            <p>Company is an equal-opportunity employer. Candidates must be authorized to work in the country they apply
-                from.
+        <section style="float: left ; width: 60%">
+            <!--Embedded Style to make font black-->
+            <h2 style="color: black;">How to apply</h2>
+
+            <p> Send a one-page cover note and portfolio or GitHub link to
+                <!--Link to Email--> 
+                <ahref=" mailto:jobs@email.com">jobs@example.com</ahref=> 
+                with the reference code in the subject line.
             </p>
+            
+            <p> We review applications on a rolling basis and aim for an interview loop that includes a short design/code
+                exercise and two cross-functional interviews.</p>
+            
+            <p> Company is an equal-opportunity employer. Candidates must be authorized to work in the country they apply
+                from. </p>
 
         </section>
 
-
-        <!-- <aside> is used for related, secondary content. Here it lists perks and practical information -->
+        <!-- Aside for Perks and practicals.-->
         <aside>
-            <h3 id="benefits">Perks & practicals</h3>
+            <h3>Perks & practicals</h3>
+            <!--Unordered List for Perks-->
             <ul>
                 <li>Flexible remote working (core overlap hours)</li>
                 <li>Competitive equity and parental leave</li>
@@ -245,15 +224,15 @@
         </aside>
     </main>
 
-
-    <!-- <footer> is for page-level footer content -->
-    <footer id="jobfooter">
+    <!--Adds break against Perks and Practicals-->
+    <footer style="clear:both">
         <!--Jira Link-->
         <p><a href="https://sothearithkuy37.atlassian.net/jira/software/projects/A1/summary"
-                title="This takes you to Jira">Jira Link</a></p>
+         title="This takes you to Jira">Jira Link</a></p>
         <!--Github Link-->
-        <p><a href="https://github.com/Nam-Tran6/Applied-Group5-Project">Github Link</a></p>
+        <a href="https://github.com/Nam-Tran6/Applied-Group5-Project">Github Link</a>
         <!-- Email Link-->
-        <p><a href="mailto:info@companyname.com">Email</a></p>
+        <a href="mailto:info@companyname.com">Email</a>
+        <!--Jira Link-->
     </footer>
 </body>
